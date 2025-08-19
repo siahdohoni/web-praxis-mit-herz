@@ -2,3 +2,12 @@ backend:
   name: git-gateway
 media_folder: "src/assets/images"
 public_folder: "src/assets/images"
+collections:
+  - name: settings
+    label: Einstellungen
+    files:
+      - name: site-settings
+        label: Seiteneinstellungen
+        file: src/settings/site-settings.json
+        fields:
+          - { label: Titel der Webseite, name: siteTitle, widget: string }
