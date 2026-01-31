@@ -1,0 +1,152 @@
+{
+  "links": [
+    {
+      "label": "Willkommen",
+      "href": "/",
+      "sublinks": [
+        {
+          "label": "Über mich",
+          "href": "/about"
+        }
+      ]
+    },
+    {
+      "label": "Kinderwunsch",
+      "href": "/kinderwunsch",
+      "sublinks": [
+        {
+          "label": "Anamnese und Therapiekonzept",
+          "href": "/anamnese-und-therapiekonzept"
+        },
+        {
+          "label": "Fruchtbarkeitsmassage",
+          "href": "/fruchtbarkeitsmassage"
+        },
+        {
+          "label": "Osteopathie",
+          "href": "/osteopathie-kinderwunsch"
+        },
+        {
+          "label": "Kinderwunschhypnose",
+          "href": "/kinderwunschhypnose"
+        },
+        {
+          "label": "Männliche Fertilität",
+          "href": "/männliche-fertilität"
+        }
+      ]
+    },
+    {
+      "label": "Schwangerschaft",
+      "href": "/schwangerschaft",
+      "sublinks": [
+        {
+          "label": "Naturheilkunde und Homöopathie",
+          "href": "/naturheilkunde-und-homöopathie"
+        },
+        {
+          "label": "Osteopathie",
+          "href": "/osteopathie-schwangerschaft"
+        },
+        {
+          "label": "Schwangerschaftsmassage",
+          "href": "/schwangerschaftsmassage"
+        },
+        {
+          "label": "Geburtsvorbereitende Hypnose",
+          "href": "/geburtsvorbereitende-hypnose"
+        },
+        {
+          "label": "Schwangerschaftsyoga",
+          "href": "/schwangerschaftsyoga"
+        }
+      ]
+    },
+    {
+      "label": "Frauenheilkunde",
+      "href": "/frauenheilkunde",
+      "sublinks": [
+        {
+          "label": "Hormonhaushalt",
+          "href": "/hormonhaushalt"
+        },
+        {
+          "label": "Schilddrüse",
+          "href": "/schilddrüse"
+        },
+        {
+          "label": "Osteopathie",
+          "href": "/osteopathie-frauenheilkunde"
+        },
+        {
+          "label": "Wechseljahre",
+          "href": "/wechseljahre"
+        },
+        {
+          "label": "Chronische Erschöpfung und Müdigkeit",
+          "href": "/chronische-erschöpfung-und-müdigkeit"
+        },
+        {
+          "label": "Ernährungsberatung und Gewichtsregulation",
+          "href": "/ernährungsberatung-und-gewichtsregulation"
+        }
+      ]
+    },
+    {
+      "label": "Babyzeit",
+      "href": "/babyzeit",
+      "sublinks": [
+        {
+          "label": "Baby- und Kinderosteopathie",
+          "href": "/baby-und-kinderosteopathie"
+        },
+        {
+          "label": "Babymassage",
+          "href": "/babymassage"
+        },
+        {
+          "label": "Naturheilkunde und Homöopathie",
+          "href": "/naturheilkunde-und-homöopathie"
+        },
+        {
+          "label": "Motorische Entwicklung",
+          "href": "/motorische-entwicklung"
+        }
+      ]
+    },
+    {
+      "label": "Kontakt",
+      "href": "/kontakt",
+      "sublinks": [
+        {
+          "label": "Praxis",
+          "href": "/praxis"
+        },
+        {
+          "label": "Kontakt und Anfahrt",
+          "href": "/kontakt-und-anfahrt"
+        },
+        {
+          "label": "Terminvereinbarung",
+          "href": "/terminvereinbarung"
+        },
+        {
+          "label": "Labordiagnostik",
+          "href": "/labordiagnostik"
+        },
+        {
+          "label": "Honorar",
+          "href": "/honorar"
+        },
+        {
+          "label": "Hinweise zu Kostenerstattung",
+          "href": "/hinweise-zu-kostenerstattung"
+        }
+      ]
+    },
+    {
+      "label": "Seminare",
+      "href": "/seminare"
+    }
+  ]
+}

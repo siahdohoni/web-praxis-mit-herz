@@ -11,3 +11,23 @@ collections:
         file: src/settings/site-settings.json
         fields:
           - { label: Titel der Webseite, name: siteTitle, widget: string }
+      - name: navigation
+        label: Navigation
+        file: src/settings/navigation.json
+        fields:
+          - label: Links
+            name: links
+            widget: list
+            summary: "{{fields.label}} → {{fields.href}}"
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: URL, name: href, widget: string }
+              - name: sublinks
+                label: Unterlinks
+                widget: list
+                required: false
+                collapsed: true
+                summary: "{{fields.label}} → {{fields.href}}"
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: URL, name: href, widget: string }
