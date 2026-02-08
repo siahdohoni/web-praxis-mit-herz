@@ -3,150 +3,184 @@
     {
       "label": "Willkommen",
       "href": "/",
+      "header_img": "src/assets/images/Header-Startseite.jpg",
       "sublinks": [
         {
           "label": "Über mich",
-          "href": "/about"
+          "href": "/about",
+          "header_img": "src/assets/images/Header_Übermichund\\ Seminare.jpg"
         }
       ]
     },
     {
       "label": "Kinderwunsch",
       "href": "/kinderwunsch",
+      "header_img": "src/assets/images/Kinderwunsch.jpg",
       "sublinks": [
         {
           "label": "Anamnese und Therapiekonzept",
-          "href": "/anamnese-und-therapiekonzept"
+          "href": "/anamnese-und-therapiekonzept",
+          "header_img": "src/assets/images/Kinderwunsch.jpg"
         },
         {
           "label": "Fruchtbarkeitsmassage",
-          "href": "/fruchtbarkeitsmassage"
+          "href": "/fruchtbarkeitsmassage",
+          "header_img": "src/assets/images/Kinderwunsch.jpg"
         },
         {
           "label": "Osteopathie",
-          "href": "/osteopathie-kinderwunsch"
+          "href": "/osteopathie-kinderwunsch",
+          "header_img": "src/assets/images/Kinderwunsch.jpg"
         },
         {
           "label": "Kinderwunschhypnose",
-          "href": "/kinderwunschhypnose"
+          "href": "/kinderwunschhypnose",
+          "header_img": "src/assets/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
         },
         {
           "label": "Männliche Fertilität",
-          "href": "/männliche-fertilität"
+          "href": "/männliche-fertilität",
+          "header_img": "src/assets/images/Mann_Kiwu.jpg"
         }
       ]
     },
     {
       "label": "Schwangerschaft",
       "href": "/schwangerschaft",
+      "header_img": "src/assets/images/Schwangerschaft.jpg",
       "sublinks": [
         {
           "label": "Naturheilkunde und Homöopathie",
-          "href": "/naturheilkunde-und-homöopathie"
+          "href": "/naturheilkunde-und-homöopathie",
+          "header_img": "src/assets/images/Schwangerschaft.jpg"
         },
         {
           "label": "Osteopathie",
-          "href": "/osteopathie-schwangerschaft"
+          "href": "/osteopathie-schwangerschaft",
+          "header_img": "src/assets/images/Schwangerschaft.jpg"
         },
         {
           "label": "Schwangerschaftsmassage",
-          "href": "/schwangerschaftsmassage"
+          "href": "/schwangerschaftsmassage",
+          "header_img": "src/assets/images/Schwangerschaft.jpg"
         },
         {
           "label": "Geburtsvorbereitende Hypnose",
-          "href": "/geburtsvorbereitende-hypnose"
+          "href": "/geburtsvorbereitende-hypnose",
+          "header_img": "src/assets/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
         },
         {
           "label": "Schwangerschaftsyoga",
-          "href": "/schwangerschaftsyoga"
+          "href": "/schwangerschaftsyoga",
+          "header_img": "src/assets/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
         }
       ]
     },
     {
       "label": "Frauenheilkunde",
       "href": "/frauenheilkunde",
+      "header_img": "src/assets/images/Header_Frauenheilkund.jpg",
       "sublinks": [
         {
           "label": "Hormonhaushalt",
-          "href": "/hormonhaushalt"
+          "href": "/hormonhaushalt",
+          "header_img": "src/assets/images/Header_Frauenheilkund.jpg"
         },
         {
           "label": "Schilddrüse",
-          "href": "/schilddrüse"
+          "href": "/schilddrüse",
+          "header_img": "src/assets/images/Header_Frauenheilkund.jpg"
         },
         {
           "label": "Osteopathie",
-          "href": "/osteopathie-frauenheilkunde"
+          "href": "/osteopathie-frauenheilkunde",
+          "header_img": "src/assets/images/Header_Frauenheilkund.jpg"
         },
         {
           "label": "Wechseljahre",
-          "href": "/wechseljahre"
+          "href": "/wechseljahre",
+          "header_img": "src/assets/images/Header-Wechseljahre_\\ Erschöpfung.jpg"
         },
         {
           "label": "Chronische Erschöpfung und Müdigkeit",
-          "href": "/chronische-erschöpfung-und-müdigkeit"
+          "href": "/chronische-erschöpfung-und-müdigkeit",
+          "header_img": "src/assets/images/Header-Wechseljahre_\\ Erschöpfung.jpg"
         },
         {
           "label": "Ernährungsberatung und Gewichtsregulation",
-          "href": "/ernährungsberatung-und-gewichtsregulation"
+          "href": "/ernährungsberatung-und-gewichtsregulation",
+          "header_img": "src/assets/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
         }
       ]
     },
     {
       "label": "Babyzeit",
       "href": "/babyzeit",
+      "header_img": "src/assets/images/Babyzeit.jpg",
       "sublinks": [
         {
           "label": "Baby- und Kinderosteopathie",
-          "href": "/baby-und-kinderosteopathie"
+          "href": "/baby-und-kinderosteopathie",
+          "header_img": "src/assets/images/Babyzeit.jpg"
         },
         {
           "label": "Babymassage",
-          "href": "/babymassage"
+          "href": "/babymassage",
+          "header_img": "src/assets/images/Babyzeit.jpg"
         },
         {
           "label": "Naturheilkunde und Homöopathie",
-          "href": "/naturheilkunde-und-homöopathie"
+          "href": "/naturheilkunde-und-homöopathie",
+          "header_img": "src/assets/images/Babyzeit.jpg"
         },
         {
           "label": "Motorische Entwicklung",
-          "href": "/motorische-entwicklung"
+          "href": "/motorische-entwicklung",
+          "header_img": "src/assets/images/Babyzeit.jpg"
         }
       ]
     },
     {
       "label": "Kontakt",
       "href": "/kontakt",
+      "header_img": "src/assets/images/Header_Kontakt-neu.jpg",
       "sublinks": [
         {
           "label": "Praxis",
-          "href": "/praxis"
+          "href": "/praxis",
+          "header_img": "src/assets/images/Header_Kontakt-neu.jpg"
         },
         {
           "label": "Kontakt und Anfahrt",
-          "href": "/kontakt-und-anfahrt"
+          "href": "/kontakt-und-anfahrt",
+          "header_img": "src/assets/images/Header_Kontakt-neu.jpg"
         },
         {
           "label": "Terminvereinbarung",
-          "href": "/terminvereinbarung"
+          "href": "/terminvereinbarung",
+          "header_img": "src/assets/images/Header_Kontakt-neu.jpg"
         },
         {
           "label": "Labordiagnostik",
-          "href": "/labordiagnostik"
+          "href": "/labordiagnostik",
+          "header_img": "src/assets/images/Header_Kontakt-neu.jpg"
         },
         {
           "label": "Honorar",
-          "href": "/honorar"
+          "href": "/honorar",
+          "header_img": "src/assets/images/Header_Kontakt-neu.jpg"
         },
         {
           "label": "Hinweise zu Kostenerstattung",
-          "href": "/hinweise-zu-kostenerstattung"
+          "href": "/hinweise-zu-kostenerstattung",
+          "header_img": "src/assets/images/Header_Kontakt-neu.jpg"
         }
       ]
     },
     {
       "label": "Seminare",
-      "href": "/seminare"
+      "href": "/seminare",
+      "header_img": "src/assets/images/Header_Übermichund\\ Seminare.jpg"
     }
   ]
 }
