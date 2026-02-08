@@ -3,6 +3,15 @@ backend:
 media_folder: "src/assets/images"
 public_folder: "src/assets/images"
 collections:
+  - name: page
+    label: Seite
+    folder: src/content
+    create: true
+    extension: mdx
+    format: frontmatter
+    fields:
+      - { label: Titel, name: title, widget: string }
+      - { label: Inhalt, name: body, widget: markdown }
   - name: settings
     label: Einstellungen
     files:
