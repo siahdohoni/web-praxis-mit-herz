@@ -1,0 +1,58 @@
+---
+import navigation from '../settings/navigation.json';
+
+// Ensure we have a clean list of links with optional sublinks
+type NavLink = { label: string; href: string; sublinks?: Array<{ label: string; href: string }> | null };
+const links: Array<NavLink> = Array.isArray(navigation?.links)
+    ? navigation.links
+        .filter((l: any) => l && typeof l.label === 'string' && typeof l.href === 'string')
+        .map((l: any) => ({
+            label: l.label,
+            href: l.href,
+            sublinks: Array.isArray(l?.sublinks)
+                ? l.sublinks.filter((s: any) => s && typeof s.label === 'string' && typeof s.href === 'string')
+                : undefined,
+        }))
+    : [];
+
+const currentPath = Astro.url.pathname;
+const normalize = (path: string) => path.replace(/\/$/, '') || '/';
+const normalizedCurrentPath = normalize(currentPath);
+---
+<nav class="mod_navigation nav_main block" role="off-canvas">
+  <a href="#skipNavigation52"
+     class="invisible">Navigation überspringen</a>
+  <ul class="level_1">
+      {
+          links.map((l) => {
+              const isActive = normalize(l.href) === normalizedCurrentPath;
+              const isSubActive = l.sublinks?.some(s => normalize(s.href) === normalizedCurrentPath);
+              return (
+                <li class="submenu">
+                    {isActive ?
+                        (<span class={isActive ? 'active' : ''}>{l.label}</span>) :
+                        (<a href={l.href} class={isSubActive ? 'trail' : ''}>{l.label}</a>)}
+                    {Array.isArray(l.sublinks) && l.sublinks.length > 0 ? (
+                      <ul class="level_2">
+                          {l.sublinks.map((s) => {
+                              const isSubActive = normalize(s.href) === normalizedCurrentPath;
+                              return (
+                                <li>
+                                    {isSubActive ?
+                                        (<span
+                                          class={isSubActive ? 'active' : ''}>{s.label}</span>) :
+                                        (<a href={s.href}>{s.label}</a>)}
+                                </li>
+                              );
+                          })}
+                      </ul>
+                    ) : null}
+                </li>
+              );
+          })
+      }
+  </ul>
+
+
+  <a id="skipNavigation52" class="invisible">&nbsp;</a>
+</nav>

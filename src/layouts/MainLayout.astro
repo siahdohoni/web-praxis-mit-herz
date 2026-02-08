@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+const {title} = Astro.props;
+---
+<html lang="de">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>{title} - Heilpraktikerin Simone Schulz - Frankfurt</title>
+  </head>
+  <body id="top" class="mac chrome blink ch143">
+    <input type="checkbox" id="menu" class="mobile-check">
+    <label for="menu" class="button-nav-mobile"></label>
+    <div class="outer-wrapper">
+      <div class="inner-wrapper">
+        <Header/>
+        <div id="wrapper">
+          <div id="container">
+            <div id="main">
+              <slot/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer/>
+    </div>
+  </body>
+</html>

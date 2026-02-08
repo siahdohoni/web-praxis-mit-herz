@@ -1,0 +1,97 @@
+---
+import {Image} from 'astro:assets';
+import navigation from '../settings/navigation.json'
+const currentPath = Astro.url.pathname;
+
+// Find the current navigation item to get the header image
+const allLinks = navigation.links.flatMap(link => [
+  link,
+  ...(link.sublinks || [])
+]);
+
+const currentLink = allLinks.find(link => {
+  // Normalize paths for comparison (remove trailing slashes)
+  const normalize = (path) => path.replace(/\/$/, '') || '/';
+  return normalize(link.href) === normalize(currentPath);
+});
+
+const headerImage = currentLink?.header_img || 'src/assets/images/header0.jpeg';
+
+// Breadcrumb logic
+const normalize = (path) => path.replace(/\/$/, '') || '/';
+const normalizedCurrentPath = normalize(currentPath);
+
+let breadcrumbs = [];
+  for (const link of navigation.links) {
+    if (normalize(link.href) === normalizedCurrentPath) {
+      breadcrumbs.push({ label: link.label, href: link.href });
+      break;
+    }
+    if (link.sublinks) {
+      const sublink = link.sublinks.find(s => normalize(s.href) === normalizedCurrentPath);
+      if (sublink) {
+        breadcrumbs.push({ label: link.label, href: link.href });
+        breadcrumbs.push({ label: sublink.label, href: sublink.href });
+        break;
+      }
+    }
+  }
+
+import Navbar from "./Navbar.astro";
+
+---
+<header id="header">
+  <div class="inside">
+    <div class="innerwrapper">
+      <div class="logo">
+        <div>
+          <a href="https://www.heilpraktikerin-schulz-frankfurt.de/" title="Startseite">
+            <img
+              src="src/assets/images/logo.png"
+              title="Logo Heilpraktikerin Simone Schulz" alt="Logo Heilpraktikerin Simone Schulz"/>
+          </a>
+        </div>
+      </div>
+      <div class="right-elements">
+        <!-- activate these elements in layout -->
+        <!-- login button -->
+        <!-- search field -->
+        <!-- social buttons -->
+      </div>
+    </div>
+    <div class="mod_article headerimage block" id="article-124">
+      <div class="ce_gallery block">
+        <ul>
+          <li class="row_0 row_first row_last even col_0 col_first col_last"
+              style={`background-image:url(${headerImage});`}>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- leave this in as long as no article content is in the header -->
+    <div class="placeholder"></div>
+    <div class="nav-wrapper">
+      <!-- indexer::stop -->
+      <Navbar/>
+      <!-- indexer::continue -->
+      <div class="show-mobile">
+      </div><!-- END .show-mobile -->
+    </div><!-- END .nav-wrapper -->
+    <!-- indexer::stop -->
+    <nav class="mod_breadcrumb block" aria-label="Breadcrumb">
+      <ul>
+        <li class="first"><a href="/" title="Heilpraktikerin Simone Schulz - Frankfurt">Heilpraktikerin Simone Schulz Frankfurt</a></li>
+        {breadcrumbs.map((crumb, index) => (
+          <li class={index === breadcrumbs.length - 1 ? "active last" : ""} aria-current={index === breadcrumbs.length - 1 ? "page" : undefined}>
+            {index === breadcrumbs.length - 1 ? (
+              crumb.label
+            ) : (
+              <a href={crumb.href} title={crumb.label}>{crumb.label}</a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <!-- indexer::continue -->
+  </div>
+</header>
