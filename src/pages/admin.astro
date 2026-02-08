@@ -1,5 +1,4 @@
 ---
-
 ---
 <html lang="en">
   <head>
@@ -10,6 +9,27 @@
     <title>Content Manager</title>
   </head>
   <body>
-    <script src="https://unpkg.com/decap-cms@^3.10.0/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/decap-cms@^3.10.0/dist/decap-cms.js" is:inline></script>
   </body>
 </html>
+
+<script>
+  import {DocToLibButton} from '../cms/components/DocToLibButton.js'
+  import {JamedaEmbedding} from '../cms/components/JamedaEmbedding.js'
+
+    function register() {
+        // @ts-ignore
+        const CMS = window.CMS;
+        CMS.registerPreviewStyle('/src/styles/global.css');
+        CMS.registerPreviewStyle('/src/styles/layout.min.css');
+
+        CMS.registerEditorComponent(DocToLibButton);
+        CMS.registerEditorComponent(JamedaEmbedding);
+    }
+
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        register();
+    } else {
+        window.addEventListener('DOMContentLoaded', register);
+    }
+</script>

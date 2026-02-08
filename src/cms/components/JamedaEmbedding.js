@@ -1,0 +1,36 @@
+export const JamedaEmbedding = {
+    id: 'jamedaembedding',
+    label: 'JamedaEmbedding',
+    fields: [],
+    pattern: /<JamedaEmbedding\s*\/>/m,
+    fromBlock: function (match) {
+        return {};
+    },
+    toBlock: function (obj) {
+        return `<JamedaEmbedding />`;
+    },
+    toPreview: function (obj) {
+        return `<div
+  style="position:relative;width:272px;height:168px;margin:15px;background-image:url(https://platform.docplanner.com/img/de/badge/top10-top20-bg-new.png);background-repeat:no-repeat;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px">
+  <div
+    style="position:absolute; top:25px; left:108px; width:148px; height:58px; overflow:hidden; white-space:normal;"><a
+    href="https://www.jameda.de/simone-schulz/heilpraktiker/hessen?utm_source=doc-website&amp;utm_medium=badge&amp;utm_campaign=jameda-top10-awards"
+    style="font-size:15px; line-height:18px; font-weight:bold; color:#00ac92; text-shadow: 1px 1px #ffffff; text-decoration:none; border:0px;"
+    target="_blank" rel="noopener">M.A. Simone Schulz</a></div>
+  <div
+    style="position:absolute; top:98px; left:108px; width:152px; height:53px; overflow:hidden; color:#888; font-size:12px; line-height:15px;">
+    <a
+      href="https://www.jameda.de/heilpraktiker/frankfurt?utm_source=doc-website&amp;utm_medium=badge&amp;utm_campaign=jameda-top10-awards"
+      style="color:#00ac92; font-size:12px; text-decoration:none; border:0px; background-color:transparent !important;"
+      target="_blank" rel="noopener"><strong>Heilpraktiker</strong><br>in Frankfurt auf&nbsp;jameda</a></div>
+  <span><a
+    href="https://www.jameda.de/heilpraktiker/frankfurt?utm_source=doc-website&amp;utm_medium=badge&amp;utm_campaign=jameda-top10-awards"
+    target="_blank"
+    style="display:block; position:absolute; top:15px; left:20px; width:70px; height:134px; text-align:center; text-decoration:none; border:0px; overflow:hidden; background-color:transparent !important; background-image:none !important;"
+    title="Basis: Patientenmeinungen auf jameda.de"><img
+    src="https://platform.docplanner.com/img/de/badge/top10-new.gif" width="56" height="59"
+    style="float:none; margin:0 0 10px 2px; padding:0; border:0; background:none;"><div
+    style="font-size:14px; margin-top:4px; color:#ffffff;">01/2024</div></a></span>
+</div>`;
+    }
+};
