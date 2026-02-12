@@ -7,10 +7,11 @@ export const Card = {
     {label: 'Title', name: 'title', widget: 'string', required: false},
     {label: 'Image', name: 'image', widget: 'image'},
     {label: 'Alt Text', name: 'alt', widget: 'string', required: false},
+    {label: 'Link (URL)', name: 'href', widget: 'string', required: false},
     {label: 'Body', name: 'body', widget: 'markdown'},
   ],
-  // Match <Card title="..." image="..." body="..." href="" alt="...">content</Card>
-  pattern: /^\s*<Card\s+([^>]*?)>([\s\S]*?)<\/Card>/m,
+  // Match <Card title="..." image="..." body="..." href="..." alt="...">content</Card>
+  pattern: /^\s*<Card\s+([^>]*?)>([\s\S]*?)\s*<\/Card>/m,
   fromBlock: function (match) {
     return {
       ...parseAttrs(match[1]),
@@ -19,7 +20,9 @@ export const Card = {
   },
   toBlock: function (obj) {
     const { body, ...rest } = obj;
-    return `<Card ${toAttrString(rest, ['title', 'image', 'alt'])}>${body || ''}</Card>`;
+    return `<Card ${toAttrString(rest, ['title', 'image', 'href', 'alt'])}>
+${body || ''}
+</Card>`;
   },
   toPreview: function (obj) {
     return `

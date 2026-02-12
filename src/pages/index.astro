@@ -1,15 +1,18 @@
 ---
-import settings from "../settings/site-settings.json";
+import { getEntry, render } from 'astro:content';
+import MainLayout from '../layouts/MainLayout.astro';
+import JamedaEmbedding from '../components/JamedaEmbedding.astro';
+import DocToLibButton from '../components/DocToLibButton.astro';
+import Card from '../components/Card.astro';
+
+const entry = await getEntry('page', 'index');
+
+if (!entry) {
+    return Astro.redirect('/404');
+}
+
+const { Content } = await render(entry);
 ---
-<html lang="en">
-  <head>
-    <meta charset="utf-8"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico"/>
-    <meta name="viewport" content="width=device-width"/>
-    <meta name="generator" content={Astro.generator}/>
-    <title>{settings.siteTitle}</title>
-  </head>
-  <body>
-    <h1>Praxis mit Herz</h1>
-  </body>
-</html>
+<MainLayout {...entry.data}>
+    <Content components={{JamedaEmbedding, DocToLibButton, Card}} />
+</MainLayout>

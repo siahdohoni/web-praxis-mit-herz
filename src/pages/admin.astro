@@ -16,6 +16,7 @@
 <script>
   import {DocToLibButton} from '../cms/components/DocToLibButton.js'
   import {JamedaEmbedding} from '../cms/components/JamedaEmbedding.js'
+  import {Card} from '../cms/components/Card.js'
 
     function register() {
         // @ts-ignore
@@ -25,6 +26,7 @@
 
         CMS.registerEditorComponent(DocToLibButton);
         CMS.registerEditorComponent(JamedaEmbedding);
+        CMS.registerEditorComponent(Card);
     }
 
     if (document.readyState === 'complete' || document.readyState === 'interactive') {
