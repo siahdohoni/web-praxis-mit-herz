@@ -1,0 +1,53 @@
+---
+import {Image} from 'astro:assets';
+
+interface Props {
+    title?: string;
+    body: string;
+    image: string;
+    href?: string;
+    alt?: string;
+}
+
+// Eagerly import all images from src/assets/images so we can look them up at runtime
+const images = import.meta.glob('../assets/images/**/*', {eager: true, import: 'default'}) as Record<string, string>;
+
+function resolveImage(input?: string): string | undefined {
+    if (!input) return undefined;
+    // Allow absolute URLs to pass through unchanged
+    if (/^https?:\/\//i.test(input)) return input;
+
+    // Normalize common authoring patterns
+    let cleaned = String(input).trim();
+    cleaned = cleaned.replace(/^\//, ''); // drop leading slash
+
+    // If starts with src/assets/images/ -> convert to assets/images/
+    if (cleaned.startsWith('src/assets/images/')) {
+        cleaned = cleaned.replace(/^src\//, ''); // assets/images/...
+    }
+
+    // Try several candidate keys to match our glob map
+    const candidates = [
+        `../${cleaned}`,
+        `../assets/images/${cleaned.replace(/^.*assets\/images\//, '')}`,
+    ];
+
+    for (const key of candidates) {
+        if (key in images) return images[key];
+    }
+
+    // As a last resort, return the original input (may be a relative URL from page context)
+    return input;
+}
+
+const {title, image, href = '', alt = ''} = Astro.props as Props;
+const resolved = resolveImage(image);
+---
+<div class="ce_text grid1 block">
+  <figure class="image_container float_above">
+    <a href={href} title={title}>
+      <Image src={resolved} alt={alt} width={300}/>
+    </a>
+  </figure>
+    <slot />
+</div>
