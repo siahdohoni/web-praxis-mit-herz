@@ -2,7 +2,20 @@
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-const {title} = Astro.props;
+import navigation from "../settings/navigation.json";
+import settings from "../settings/site-settings.json";
+
+const currentPath = Astro.url.pathname;
+const normalize = (path: string) => decodeURIComponent(path).replace(/\/$/, '') || '/';
+const normalizedCurrentPath = normalize(currentPath);
+
+const allLinks = navigation.links.flatMap(link => [
+  link,
+  ...(link.sublinks || [])
+]);
+
+const currentLink = allLinks.find(link => normalize(link.href) === normalizedCurrentPath);
+const pageTitle = currentLink?.title || Astro.props.title || "Praxis mit Herz";
 ---
 <html lang="de">
   <head>
@@ -14,7 +27,7 @@ const {title} = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.ico"/>
     <meta name="viewport" content="width=device-width"/>
     <meta name="generator" content={Astro.generator}/>
-    <title>{title} - Heilpraktikerin Simone Schulz - Frankfurt</title>
+    <title>{pageTitle + settings.siteTitleSuffix}</title>
   </head>
   <body id="top" class="mac chrome blink ch143">
     <input type="checkbox" id="menu" class="mobile-check">

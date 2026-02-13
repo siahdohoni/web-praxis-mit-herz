@@ -4,6 +4,7 @@ import MainLayout from '../layouts/MainLayout.astro'
 import JamedaEmbedding from '../components/JamedaEmbedding.astro';
 import DocToLibButton from '../components/DocToLibButton.astro';
 import ImageBlock from '../components/ImageBlock.astro';
+import Card from '../components/Card.astro';
 
 export async function getStaticPaths() {
     const pages = await getCollection('page');
@@ -17,6 +18,6 @@ type Props = CollectionEntry<'page'>;
 const page = Astro.props;
 const { Content } = await render(page);
 ---
-<MainLayout {...page.data}>
-  <Content components={{JamedaEmbedding, DocToLibButton, ImageBlock}}/>
+<MainLayout>
+  <Content components={{JamedaEmbedding, DocToLibButton, ImageBlock, Card}}/>
 </MainLayout>

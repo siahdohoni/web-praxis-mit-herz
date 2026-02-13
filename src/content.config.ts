@@ -5,7 +5,7 @@ const page = defineCollection({
     loader: glob({base: './src/content', pattern: '**/*.{md,mdx}'}),
     schema: () =>
         z.object({
-            title: z.string()
+            slug: z.string()
         }),
 });
 

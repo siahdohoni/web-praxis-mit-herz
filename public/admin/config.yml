@@ -10,8 +10,9 @@ collections:
     create: true
     extension: mdx
     format: frontmatter
+    identifier_field: slug
     fields:
-      - { label: Titel, name: title, widget: string }
+      - { label: "Dateiname / Slug", name: "slug", widget: "string" }
       - { label: Inhalt, name: body, widget: markdown }
   - name: settings
     label: Einstellungen
@@ -20,7 +21,7 @@ collections:
         label: Seiteneinstellungen
         file: src/settings/site-settings.json
         fields:
-          - { label: Titel der Webseite, name: siteTitle, widget: string }
+          - { label: Titel Suffix, name: siteTitleSuffix, widget: string }
       - name: navigation
         label: Navigation
         file: src/settings/navigation.json
@@ -31,7 +32,9 @@ collections:
             summary: "{{fields.label}} → {{fields.href}}"
             fields:
               - { label: Label, name: label, widget: string }
+              - { label: Titel, name: title, widget: string }
               - { label: URL, name: href, widget: string }
+              - { label: Header Bild, name: header_img, widget: image, required: false }
               - name: sublinks
                 label: Unterlinks
                 widget: list
@@ -40,4 +43,6 @@ collections:
                 summary: "{{fields.label}} → {{fields.href}}"
                 fields:
                   - { label: Label, name: label, widget: string }
+                  - { label: Titel, name: title, widget: string }
                   - { label: URL, name: href, widget: string }
+                  - { label: Header Bild, name: header_img, widget: image, required: false }
