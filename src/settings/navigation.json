@@ -8,6 +8,7 @@
       "sublinks": [
         {
           "label": "Über mich",
+          "title": "Über mich",
           "href": "/über-mich",
           "header_img": "/images/Header_Übermichund\\ Seminare.jpg"
         }
