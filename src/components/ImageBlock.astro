@@ -1,0 +1,19 @@
+---
+import {Image} from 'astro:assets';
+
+interface Props {
+    title?: string;
+    body: string;
+    image: string;
+    alt?: string;
+}
+
+const {title, body, image, alt = ''} = Astro.props as Props;
+---
+<div class="ce_text block">
+  <figure class="image_container float_right">
+    <img src={image} alt={alt} width="300"/>
+  </figure>
+    {title && <h1>{title}</h1>}
+    {body}
+</div>

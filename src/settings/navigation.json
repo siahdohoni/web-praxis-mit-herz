@@ -3,184 +3,184 @@
     {
       "label": "Willkommen",
       "href": "/",
-      "header_img": "src/assets/images/Header-Startseite.jpg",
+      "header_img": "/images/Header-Startseite.jpg",
       "sublinks": [
         {
           "label": "Über mich",
           "href": "/about",
-          "header_img": "src/assets/images/Header_Übermichund\\ Seminare.jpg"
+          "header_img": "/images/Header_Übermichund\\ Seminare.jpg"
         }
       ]
     },
     {
       "label": "Kinderwunsch",
       "href": "/kinderwunsch",
-      "header_img": "src/assets/images/Kinderwunsch.jpg",
+      "header_img": "/images/Kinderwunsch.jpg",
       "sublinks": [
         {
           "label": "Anamnese und Therapiekonzept",
           "href": "/anamnese-und-therapiekonzept",
-          "header_img": "src/assets/images/Kinderwunsch.jpg"
+          "header_img": "/images/Kinderwunsch.jpg"
         },
         {
           "label": "Fruchtbarkeitsmassage",
           "href": "/fruchtbarkeitsmassage",
-          "header_img": "src/assets/images/Kinderwunsch.jpg"
+          "header_img": "/images/Kinderwunsch.jpg"
         },
         {
           "label": "Osteopathie",
           "href": "/osteopathie-kinderwunsch",
-          "header_img": "src/assets/images/Kinderwunsch.jpg"
+          "header_img": "/images/Kinderwunsch.jpg"
         },
         {
           "label": "Kinderwunschhypnose",
           "href": "/kinderwunschhypnose",
-          "header_img": "src/assets/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
+          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
         },
         {
           "label": "Männliche Fertilität",
           "href": "/männliche-fertilität",
-          "header_img": "src/assets/images/Mann_Kiwu.jpg"
+          "header_img": "/images/Mann_Kiwu.jpg"
         }
       ]
     },
     {
       "label": "Schwangerschaft",
       "href": "/schwangerschaft",
-      "header_img": "src/assets/images/Schwangerschaft.jpg",
+      "header_img": "/images/Schwangerschaft.jpg",
       "sublinks": [
         {
           "label": "Naturheilkunde und Homöopathie",
           "href": "/naturheilkunde-und-homöopathie",
-          "header_img": "src/assets/images/Schwangerschaft.jpg"
+          "header_img": "/images/Schwangerschaft.jpg"
         },
         {
           "label": "Osteopathie",
           "href": "/osteopathie-schwangerschaft",
-          "header_img": "src/assets/images/Schwangerschaft.jpg"
+          "header_img": "/images/Schwangerschaft.jpg"
         },
         {
           "label": "Schwangerschaftsmassage",
           "href": "/schwangerschaftsmassage",
-          "header_img": "src/assets/images/Schwangerschaft.jpg"
+          "header_img": "/images/Schwangerschaft.jpg"
         },
         {
           "label": "Geburtsvorbereitende Hypnose",
           "href": "/geburtsvorbereitende-hypnose",
-          "header_img": "src/assets/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
+          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
         },
         {
           "label": "Schwangerschaftsyoga",
           "href": "/schwangerschaftsyoga",
-          "header_img": "src/assets/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
+          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
         }
       ]
     },
     {
       "label": "Frauenheilkunde",
       "href": "/frauenheilkunde",
-      "header_img": "src/assets/images/Header_Frauenheilkund.jpg",
+      "header_img": "/images/Header_Frauenheilkund.jpg",
       "sublinks": [
         {
           "label": "Hormonhaushalt",
           "href": "/hormonhaushalt",
-          "header_img": "src/assets/images/Header_Frauenheilkund.jpg"
+          "header_img": "/images/Header_Frauenheilkund.jpg"
         },
         {
           "label": "Schilddrüse",
           "href": "/schilddrüse",
-          "header_img": "src/assets/images/Header_Frauenheilkund.jpg"
+          "header_img": "/images/Header_Frauenheilkund.jpg"
         },
         {
           "label": "Osteopathie",
           "href": "/osteopathie-frauenheilkunde",
-          "header_img": "src/assets/images/Header_Frauenheilkund.jpg"
+          "header_img": "/images/Header_Frauenheilkund.jpg"
         },
         {
           "label": "Wechseljahre",
           "href": "/wechseljahre",
-          "header_img": "src/assets/images/Header-Wechseljahre_\\ Erschöpfung.jpg"
+          "header_img": "/images/Header-Wechseljahre_\\ Erschöpfung.jpg"
         },
         {
           "label": "Chronische Erschöpfung und Müdigkeit",
           "href": "/chronische-erschöpfung-und-müdigkeit",
-          "header_img": "src/assets/images/Header-Wechseljahre_\\ Erschöpfung.jpg"
+          "header_img": "/images/Header-Wechseljahre_\\ Erschöpfung.jpg"
         },
         {
           "label": "Ernährungsberatung und Gewichtsregulation",
           "href": "/ernährungsberatung-und-gewichtsregulation",
-          "header_img": "src/assets/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
+          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
         }
       ]
     },
     {
       "label": "Babyzeit",
       "href": "/babyzeit",
-      "header_img": "src/assets/images/Babyzeit.jpg",
+      "header_img": "/images/Babyzeit.jpg",
       "sublinks": [
         {
           "label": "Baby- und Kinderosteopathie",
           "href": "/baby-und-kinderosteopathie",
-          "header_img": "src/assets/images/Babyzeit.jpg"
+          "header_img": "/images/Babyzeit.jpg"
         },
         {
           "label": "Babymassage",
           "href": "/babymassage",
-          "header_img": "src/assets/images/Babyzeit.jpg"
+          "header_img": "/images/Babyzeit.jpg"
         },
         {
           "label": "Naturheilkunde und Homöopathie",
           "href": "/naturheilkunde-und-homöopathie",
-          "header_img": "src/assets/images/Babyzeit.jpg"
+          "header_img": "/images/Babyzeit.jpg"
         },
         {
           "label": "Motorische Entwicklung",
           "href": "/motorische-entwicklung",
-          "header_img": "src/assets/images/Babyzeit.jpg"
+          "header_img": "/images/Babyzeit.jpg"
         }
       ]
     },
     {
       "label": "Kontakt",
       "href": "/kontakt",
-      "header_img": "src/assets/images/Header_Kontakt-neu.jpg",
+      "header_img": "/images/Header_Kontakt-neu.jpg",
       "sublinks": [
         {
           "label": "Praxis",
           "href": "/praxis",
-          "header_img": "src/assets/images/Header_Kontakt-neu.jpg"
+          "header_img": "/images/Header_Kontakt-neu.jpg"
         },
         {
           "label": "Kontakt und Anfahrt",
           "href": "/kontakt-und-anfahrt",
-          "header_img": "src/assets/images/Header_Kontakt-neu.jpg"
+          "header_img": "/images/Header_Kontakt-neu.jpg"
         },
         {
           "label": "Terminvereinbarung",
           "href": "/terminvereinbarung",
-          "header_img": "src/assets/images/Header_Kontakt-neu.jpg"
+          "header_img": "/images/Header_Kontakt-neu.jpg"
         },
         {
           "label": "Labordiagnostik",
           "href": "/labordiagnostik",
-          "header_img": "src/assets/images/Header_Kontakt-neu.jpg"
+          "header_img": "/images/Header_Kontakt-neu.jpg"
         },
         {
           "label": "Honorar",
           "href": "/honorar",
-          "header_img": "src/assets/images/Header_Kontakt-neu.jpg"
+          "header_img": "/images/Header_Kontakt-neu.jpg"
         },
         {
           "label": "Hinweise zu Kostenerstattung",
           "href": "/hinweise-zu-kostenerstattung",
-          "header_img": "src/assets/images/Header_Kontakt-neu.jpg"
+          "header_img": "/images/Header_Kontakt-neu.jpg"
         }
       ]
     },
     {
       "label": "Seminare",
       "href": "/seminare",
-      "header_img": "src/assets/images/Header_Übermichund\\ Seminare.jpg"
+      "header_img": "/images/Header_Übermichund\\ Seminare.jpg"
     }
   ]
 }

@@ -1,5 +1,4 @@
 ---
-import {Image} from 'astro:assets';
 import navigation from '../settings/navigation.json'
 const currentPath = Astro.url.pathname;
 
@@ -15,7 +14,7 @@ const currentLink = allLinks.find(link => {
   return normalize(link.href) === normalize(currentPath);
 });
 
-const headerImage = currentLink?.header_img || 'src/assets/images/header0.jpeg';
+const headerImage = currentLink?.header_img || '/images/header0.jpeg';
 
 // Breadcrumb logic
 const normalize = (path) => path.replace(/\/$/, '') || '/';
@@ -47,7 +46,7 @@ import Navbar from "./Navbar.astro";
         <div>
           <a href="https://www.heilpraktikerin-schulz-frankfurt.de/" title="Startseite">
             <img
-              src="src/assets/images/logo.png"
+              src="/images/logo.png"
               title="Logo Heilpraktikerin Simone Schulz" alt="Logo Heilpraktikerin Simone Schulz"/>
           </a>
         </div>

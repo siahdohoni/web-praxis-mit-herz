@@ -17,6 +17,7 @@
   import {DocToLibButton} from '../cms/components/DocToLibButton.js'
   import {JamedaEmbedding} from '../cms/components/JamedaEmbedding.js'
   import {Card} from '../cms/components/Card.js'
+  import {ImageBlock} from '../cms/components/ImageBlock.js'
 
     function register() {
         // @ts-ignore
@@ -27,6 +28,7 @@
         CMS.registerEditorComponent(DocToLibButton);
         CMS.registerEditorComponent(JamedaEmbedding);
         CMS.registerEditorComponent(Card);
+        CMS.registerEditorComponent(ImageBlock);
     }
 
     if (document.readyState === 'complete' || document.readyState === 'interactive') {
