@@ -8,17 +8,16 @@ const allLinks = navigation.links.flatMap(link => [
   ...(link.sublinks || [])
 ]);
 
+const normalize = (path: string) => decodeURIComponent(path).replace(/\/$/, '') || '/';
+const normalizedCurrentPath = normalize(currentPath);
 const currentLink = allLinks.find(link => {
   // Normalize paths for comparison (remove trailing slashes)
-  const normalize = (path) => path.replace(/\/$/, '') || '/';
-  return normalize(link.href) === normalize(currentPath);
+  return normalize(link.href) === normalizedCurrentPath
 });
 
 const headerImage = currentLink?.header_img || '/images/header0.jpeg';
 
 // Breadcrumb logic
-const normalize = (path) => path.replace(/\/$/, '') || '/';
-const normalizedCurrentPath = normalize(currentPath);
 
 let breadcrumbs = [];
   for (const link of navigation.links) {

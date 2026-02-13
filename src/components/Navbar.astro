@@ -16,7 +16,7 @@ const links: Array<NavLink> = Array.isArray(navigation?.links)
     : [];
 
 const currentPath = Astro.url.pathname;
-const normalize = (path: string) => path.replace(/\/$/, '') || '/';
+const normalize = (path: string) => decodeURIComponent(path).replace(/\/$/, '') || '/';
 const normalizedCurrentPath = normalize(currentPath);
 ---
 <nav class="mod_navigation nav_main block" role="off-canvas">
