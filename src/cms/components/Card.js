@@ -21,7 +21,7 @@ export const Card = {
   toBlock: function (obj) {
     const { body, ...rest } = obj;
     return `<Card ${toAttrString(rest, ['title', 'image', 'href', 'alt'])}>
-${body || ''}
+${body.trim() || ''}
 </Card>`;
   },
   toPreview: function (obj) {
