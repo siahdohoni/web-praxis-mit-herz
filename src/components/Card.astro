@@ -1,9 +1,6 @@
 ---
-import {Image} from 'astro:assets';
-
 interface Props {
     title?: string;
-    body: string;
     image: string;
     href?: string;
     alt?: string;
@@ -14,7 +11,7 @@ const {title, image, href = '', alt = ''} = Astro.props as Props;
 <div class="ce_text grid1 block">
   <figure class="image_container float_above">
     <a href={href} title={title}>
-      <img src={image} alt={alt} width="300"/>
+      <img src={image} alt={alt} title={alt} width="300"/>
     </a>
   </figure>
     <slot />
