@@ -1,0 +1,99 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+<MainLayout>
+  <div class="mod_article block" id="article-153">
+    <div class="ce_text block">
+      <p><strong>Bitte wählen Sie aus dem nachfolgenden Menü das Seminar aus, für das Sie sich anmelden
+        möchten.</strong></p>
+    </div>
+    <!-- indexer::stop -->
+    <div class="ce_form block">
+      <form method="post" enctype="application/x-www-form-urlencoded">
+        <div class="formbody">
+          <input type="hidden" name="FORM_SUBMIT" value="auto_form_3">
+          <input type="hidden" name="REQUEST_TOKEN" value="">
+          <div class="widget widget-select select mandatory">
+            <label for="ctrl_15" class="select mandatory">
+              <span class="invisible">Pflichtfeld </span>Seminar-Auswahl<span class="mandatory">*</span>
+            </label>
+            <select name="seminarauswahl" id="ctrl_15" class="select mandatory" required="">
+              <option value="tagesseminar_hormonyoga">Tagesseminar Hormonyoga für Frauen</option>
+              <option value="fortbildung_schwangerschaftsmassage">Fortbildungen Schwangerschaftsmassage (Fachkreise)
+              </option>
+            </select>
+          </div>
+          <div class="widget widget-select select">
+            <label for="ctrl_8" class="select">
+              Anrede </label>
+            <select name="anrede" id="ctrl_8" class="select">
+              <option value="frau">Frau</option>
+              <option value="herr">Herr</option>
+            </select>
+          </div>
+          <div class="widget widget-text mandatory">
+            <label for="ctrl_9" class="mandatory">
+              <span class="invisible">Pflichtfeld </span>Name<span class="mandatory">*</span>
+            </label>
+            <input type="text" name="name" id="ctrl_9" class="text mandatory" value="" required="">
+          </div>
+          <div class="widget widget-text mandatory">
+            <label for="ctrl_10" class="mandatory">
+              <span class="invisible">Pflichtfeld </span>E-Mail<span class="mandatory">*</span>
+            </label>
+            <input type="email" name="email" id="ctrl_10" class="text mandatory" value="" required="">
+          </div>
+          <div class="widget widget-text mandatory">
+            <label for="ctrl_16" class="mandatory">
+              <span class="invisible">Pflichtfeld </span>Telefon<span class="mandatory">*</span>
+            </label>
+            <input type="tel" name="telefon" id="ctrl_16" class="text mandatory" value="" required="">
+          </div>
+          <div class="widget widget-captcha mandatory" style="display: none;">
+            <label for="ctrl_11">
+              <span class="invisible">Pflichtfeld </span>Captcha<span class="mandatory">*</span>
+            </label>
+            <input type="text" name="captcha_11" id="ctrl_11" class="captcha mandatory" value=""
+                   aria-describedby="captcha_text_11" maxlength="2">
+            <span id="captcha_text_11" class="captcha_text">Was ist die Summe aus 5 und 5?</span>
+            <input type="hidden" name="captcha_11_hash101"
+                   value="05d54c81a981c6eb344839d601e3674b2ff8eea92a8af3732467a0f6181a20d4">
+            <div style="display:none">
+              <label for="ctrl_11_hp">Do not fill in this field</label>
+              <input type="text" name="captcha_11_name" id="ctrl_11_hp" value="">
+            </div>
+            <script src="/_contao/captcha/de" data-id="11" data-name="captcha_11" async=""></script>
+          </div>
+          <div class="widget widget-textarea">
+            <label for="ctrl_12">
+              Nachricht </label>
+            <textarea name="nachricht" id="ctrl_12" class="textarea" rows="4" cols="40"></textarea>
+          </div>
+          <div class="widget widget-captcha mandatory" style="display: none;">
+            <label for="ctrl_26">
+              <span class="invisible">Pflichtfeld </span>sicherheitsfrage<span class="mandatory">*</span>
+            </label>
+            <input type="text" name="captcha_26" id="ctrl_26" class="captcha mandatory" value=""
+                   aria-describedby="captcha_text_26" maxlength="2">
+            <span id="captcha_text_26" class="captcha_text">Bitte rechnen Sie 2 plus 1.</span>
+            <input type="hidden" name="captcha_26_hash10"
+                   value="698e6fbd93c55b9a7d25f43b12f4a36e9c600aad843d2937f923469165595ca3">
+            <div style="display:none">
+              <label for="ctrl_26_hp">Do not fill in this field</label>
+              <input type="text" name="captcha_26_name" id="ctrl_26_hp" value="">
+            </div>
+            <script src="/_contao/captcha/de" data-id="26" data-name="captcha_26" async=""></script>
+          </div>
+          <div class="widget widget-submit">
+            <button type="submit" id="ctrl_14" class="submit">abschicken</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- indexer::continue -->
+    <div class="ce_text block">
+      <p>Mit Absenden des Formulars bestätigen Sie, dass Sie die <a href="/datenschutz">Hinweise zum Datenschutz</a>
+        zur Kenntnis genommen haben.</p>
+    </div>
+  </div>
+</MainLayout>
