@@ -266,6 +266,14 @@
       "header_img": "/images/Header-Startseite.jpg",
       "show_in_header": false,
       "sublinks": []
+    },
+    {
+      "label": "Impressum",
+      "title": "Impressum",
+      "href": "/impressum",
+      "header_img": "/images/Header-Startseite.jpg",
+      "show_in_header": false,
+      "sublinks": []
     }
   ]
 }
