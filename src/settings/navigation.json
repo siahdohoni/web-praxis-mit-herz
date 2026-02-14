@@ -258,6 +258,14 @@
           "show_in_header": false
         }
       ]
+    },
+    {
+      "label": "Datenschutz",
+      "title": "Datenschutz",
+      "href": "/datenschutz",
+      "header_img": "/images/Header-Startseite.jpg",
+      "show_in_header": false,
+      "sublinks": []
     }
   ]
 }
