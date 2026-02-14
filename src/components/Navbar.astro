@@ -2,13 +2,21 @@
 import navigation from '../settings/navigation.json';
 
 // Ensure we have a clean list of links with optional sublinks
-type NavLink = { label: string; href: string; sublinks?: Array<{ label: string; href: string }> | null };
+type NavLink = {
+    label: string;
+    title: string,
+    href: string;
+    show_in_header: boolean;
+    sublinks?: Array<{ label: string; title: string, href: string, show_in_header: boolean }> | null
+};
 const links: Array<NavLink> = Array.isArray(navigation?.links)
     ? navigation.links
         .filter((l: any) => l && typeof l.label === 'string' && typeof l.href === 'string')
         .map((l: any) => ({
             label: l.label,
+            title: l.title,
             href: l.href,
+            show_in_header: l.show_in_header,
             sublinks: Array.isArray(l?.sublinks)
                 ? l.sublinks.filter((s: any) => s && typeof s.label === 'string' && typeof s.href === 'string')
                 : undefined,
@@ -24,24 +32,28 @@ const normalizedCurrentPath = normalize(currentPath);
      class="invisible">Navigation überspringen</a>
   <ul class="level_1">
       {
-          links.map((l) => {
+          links.filter((l) => {
+              return l.show_in_header;
+          }).map((l) => {
               const isActive = normalize(l.href) === normalizedCurrentPath;
               const isSubActive = l.sublinks?.some(s => normalize(s.href) === normalizedCurrentPath);
               return (
                 <li class="submenu">
                     {isActive ?
                         (<span class={isActive ? 'active' : ''}>{l.label}</span>) :
-                        (<a href={l.href} class={isSubActive ? 'trail' : ''}>{l.label}</a>)}
+                        (<a href={l.href} title={l.title} class={isSubActive ? 'trail' : ''}>{l.label}</a>)}
                     {Array.isArray(l.sublinks) && l.sublinks.length > 0 ? (
                       <ul class="level_2">
-                          {l.sublinks.map((s) => {
+                          {l.sublinks.filter((l) => {
+                              return l.show_in_header;
+                          }).map((s) => {
                               const isSubActive = normalize(s.href) === normalizedCurrentPath;
                               return (
                                 <li>
                                     {isSubActive ?
                                         (<span
                                           class={isSubActive ? 'active' : ''}>{s.label}</span>) :
-                                        (<a href={s.href}>{s.label}</a>)}
+                                        (<a href={s.href} title={s.title}>{s.label}</a>)}
                                 </li>
                               );
                           })}

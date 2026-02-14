@@ -5,12 +5,14 @@
       "title": "Willkommen",
       "href": "/",
       "header_img": "/images/Header-Startseite.jpg",
+      "show_in_header": true,
       "sublinks": [
         {
           "label": "Über mich",
           "title": "Über mich",
           "href": "/über-mich",
-          "header_img": "/images/Header_Übermichund\\ Seminare.jpg"
+          "header_img": "/images/Header_Übermichund\\ Seminare.jpg",
+          "show_in_header": true
         }
       ]
     },
@@ -19,36 +21,42 @@
       "title": "Kinderwunsch",
       "href": "/kinderwunsch",
       "header_img": "/images/Kinderwunsch.jpg",
+      "show_in_header": true,
       "sublinks": [
         {
           "label": "Anamnese und Therapiekonzept",
           "title": "Anamnese und Therapiekonzept",
           "href": "/anamnese-und-therapiekonzept",
-          "header_img": "/images/Kinderwunsch.jpg"
+          "header_img": "/images/Kinderwunsch.jpg",
+          "show_in_header": true
         },
         {
           "label": "Fruchtbarkeitsmassage",
           "title": "Fruchtbarkeitsmassage",
           "href": "/fruchtbarkeitsmassage",
-          "header_img": "/images/Kinderwunsch.jpg"
+          "header_img": "/images/Kinderwunsch.jpg",
+          "show_in_header": true
         },
         {
           "label": "Osteopathie",
           "title": "Osteopathie",
           "href": "/osteopathie-kinderwunsch",
-          "header_img": "/images/Kinderwunsch.jpg"
+          "header_img": "/images/Kinderwunsch.jpg",
+          "show_in_header": true
         },
         {
           "label": "Kinderwunschhypnose",
           "title": "Kinderwunschhypnose",
           "href": "/kinderwunschhypnose",
-          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
+          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
+          "show_in_header": true
         },
         {
           "label": "Männliche Fertilität",
           "title": "Männliche Fertilität",
           "href": "/männliche-fertilität",
-          "header_img": "/images/Mann_Kiwu.jpg"
+          "header_img": "/images/Mann_Kiwu.jpg",
+          "show_in_header": true
         }
       ]
     },
@@ -57,36 +65,42 @@
       "title": "Schwangerschaft",
       "href": "/schwangerschaft",
       "header_img": "/images/Schwangerschaft.jpg",
+      "show_in_header": true,
       "sublinks": [
         {
           "label": "Naturheilkunde und Homöopathie",
           "title": "Naturheilkunde und Homöopathie",
           "href": "/naturheilkunde-und-homöopathie",
-          "header_img": "/images/Schwangerschaft.jpg"
+          "header_img": "/images/Schwangerschaft.jpg",
+          "show_in_header": true
         },
         {
           "label": "Osteopathie",
           "title": "Osteopathie",
           "href": "/osteopathie-schwangerschaft",
-          "header_img": "/images/Schwangerschaft.jpg"
+          "header_img": "/images/Schwangerschaft.jpg",
+          "show_in_header": true
         },
         {
           "label": "Schwangerschaftsmassage",
           "title": "Schwangerschaftsmassage",
           "href": "/schwangerschaftsmassage",
-          "header_img": "/images/Schwangerschaft.jpg"
+          "header_img": "/images/Schwangerschaft.jpg",
+          "show_in_header": true
         },
         {
           "label": "Geburtsvorbereitende Hypnose",
           "title": "Geburtsvorbereitende Hypnose",
           "href": "/geburtsvorbereitende-hypnose",
-          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
+          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
+          "show_in_header": true
         },
         {
           "label": "Schwangerschaftsyoga",
           "title": "Schwangerschaftsyoga",
           "href": "/schwangerschaftsyoga",
-          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
+          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
+          "show_in_header": true
         }
       ]
     },
@@ -95,42 +109,49 @@
       "title": "Frauenheilkunde",
       "href": "/frauenheilkunde",
       "header_img": "/images/Header_Frauenheilkund.jpg",
+      "show_in_header": true,
       "sublinks": [
         {
           "label": "Hormonhaushalt",
           "title": "Hormonhaushalt",
           "href": "/hormonhaushalt",
-          "header_img": "/images/Header_Frauenheilkund.jpg"
+          "header_img": "/images/Header_Frauenheilkund.jpg",
+          "show_in_header": true
         },
         {
           "label": "Schilddrüse",
           "title": "Schilddrüse",
           "href": "/schilddrüse",
-          "header_img": "/images/Header_Frauenheilkund.jpg"
+          "header_img": "/images/Header_Frauenheilkund.jpg",
+          "show_in_header": true
         },
         {
           "label": "Osteopathie",
           "title": "Osteopathie",
           "href": "/osteopathie-frauenheilkunde",
-          "header_img": "/images/Header_Frauenheilkund.jpg"
+          "header_img": "/images/Header_Frauenheilkund.jpg",
+          "show_in_header": true
         },
         {
           "label": "Wechseljahre",
           "title": "Wechseljahre",
           "href": "/wechseljahre",
-          "header_img": "/images/Header-Wechseljahre_\\ Erschöpfung.jpg"
+          "header_img": "/images/Header-Wechseljahre_\\ Erschöpfung.jpg",
+          "show_in_header": true
         },
         {
           "label": "Chronische Erschöpfung und Müdigkeit",
           "title": "Chronische Erschöpfung und Müdigkeit",
           "href": "/chronische-erschöpfung-und-müdigkeit",
-          "header_img": "/images/Header-Wechseljahre_\\ Erschöpfung.jpg"
+          "header_img": "/images/Header-Wechseljahre_\\ Erschöpfung.jpg",
+          "show_in_header": true
         },
         {
           "label": "Ernährungsberatung und Gewichtsregulation",
           "title": "Ernährungsberatung und Gewichtsregulation",
           "href": "/ernährungsberatung-und-gewichtsregulation",
-          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg"
+          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
+          "show_in_header": true
         }
       ]
     },
@@ -139,30 +160,35 @@
       "title": "Babyzeit",
       "href": "/babyzeit",
       "header_img": "/images/Babyzeit.jpg",
+      "show_in_header": true,
       "sublinks": [
         {
           "label": "Baby- und Kinderosteopathie",
           "title": "Baby- und Kinderosteopathie",
           "href": "/baby-und-kinderosteopathie",
-          "header_img": "/images/Babyzeit.jpg"
+          "header_img": "/images/Babyzeit.jpg",
+          "show_in_header": true
         },
         {
           "label": "Babymassage",
           "title": "Babymassage",
           "href": "/babymassage",
-          "header_img": "/images/Babyzeit.jpg"
+          "header_img": "/images/Babyzeit.jpg",
+          "show_in_header": true
         },
         {
           "label": "Naturheilkunde und Homöopathie",
           "title": "Naturheilkunde und Homöopathie",
           "href": "/naturheilkunde-und-homöopathie",
-          "header_img": "/images/Babyzeit.jpg"
+          "header_img": "/images/Babyzeit.jpg",
+          "show_in_header": true
         },
         {
           "label": "Motorische Entwicklung",
           "title": "Motorische Entwicklung",
           "href": "/motorische-entwicklung",
-          "header_img": "/images/Babyzeit.jpg"
+          "header_img": "/images/Babyzeit.jpg",
+          "show_in_header": true
         }
       ]
     },
@@ -171,42 +197,49 @@
       "title": "Kontakt",
       "href": "/kontakt",
       "header_img": "/images/Header_Kontakt-neu.jpg",
+      "show_in_header": true,
       "sublinks": [
         {
           "label": "Praxis",
           "title": "Praxis",
           "href": "/praxis",
-          "header_img": "/images/Header_Kontakt-neu.jpg"
+          "header_img": "/images/Header_Kontakt-neu.jpg",
+          "show_in_header": false
         },
         {
           "label": "Kontakt und Anfahrt",
           "title": "Kontakt und Anfahrt",
           "href": "/kontakt-und-anfahrt",
-          "header_img": "/images/Header_Kontakt-neu.jpg"
+          "header_img": "/images/Header_Kontakt-neu.jpg",
+          "show_in_header": false
         },
         {
           "label": "Terminvereinbarung",
           "title": "Terminvereinbarung",
           "href": "/terminvereinbarung",
-          "header_img": "/images/Header_Kontakt-neu.jpg"
+          "header_img": "/images/Header_Kontakt-neu.jpg",
+          "show_in_header": false
         },
         {
           "label": "Labordiagnostik",
           "title": "Labordiagnostik",
           "href": "/labordiagnostik",
-          "header_img": "/images/Header_Kontakt-neu.jpg"
+          "header_img": "/images/Header_Kontakt-neu.jpg",
+          "show_in_header": false
         },
         {
           "label": "Honorar",
           "title": "Honorar",
           "href": "/honorar",
-          "header_img": "/images/Header_Kontakt-neu.jpg"
+          "header_img": "/images/Header_Kontakt-neu.jpg",
+          "show_in_header": false
         },
         {
           "label": "Hinweise zu Kostenerstattung",
           "title": "Hinweise zu Kostenerstattung",
           "href": "/hinweise-zu-kostenerstattung",
-          "header_img": "/images/Header_Kontakt-neu.jpg"
+          "header_img": "/images/Header_Kontakt-neu.jpg",
+          "show_in_header": false
         }
       ]
     },
@@ -214,7 +247,17 @@
       "label": "Seminare",
       "title": "Seminare",
       "href": "/seminare",
-      "header_img": "/images/Header_Übermichund\\ Seminare.jpg"
+      "header_img": "/images/Header_Übermichund\\ Seminare.jpg",
+      "show_in_header": true,
+      "sublinks": [
+        {
+          "label": "Anmeldung Seminar",
+          "title": "Anmeldung Seminar",
+          "href": "/anmeldung-seminar",
+          "header_img": "/images/Header_Übermichund\\ Seminare.jpg",
+          "show_in_header": false
+        }
+      ]
     }
   ]
 }

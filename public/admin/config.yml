@@ -35,6 +35,7 @@ collections:
               - { label: Titel, name: title, widget: string }
               - { label: URL, name: href, widget: string }
               - { label: Header Bild, name: header_img, widget: image, required: false }
+              - { label: Show in Header, name: show_in_header, widget: boolean, default: true }
               - name: sublinks
                 label: Unterlinks
                 widget: list
@@ -46,3 +47,4 @@ collections:
                   - { label: Titel, name: title, widget: string }
                   - { label: URL, name: href, widget: string }
                   - { label: Header Bild, name: header_img, widget: image, required: false }
+                  - { label: Show in Header, name: show_in_header, widget: boolean, default: true }
