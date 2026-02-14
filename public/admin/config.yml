@@ -5,8 +5,64 @@ media_folder: "public/images"
 public_folder: "/images"
 collections:
   - name: page
-    label: Seite
+    label: Hauptseiten
+    label_singular: Hauptseite
     folder: src/content
+    create: true
+    extension: mdx
+    format: frontmatter
+    identifier_field: slug
+    fields:
+      - { label: "Dateiname / Slug", name: "slug", widget: "string" }
+      - { label: Inhalt, name: body, widget: markdown }
+  - name: kinderwunsch
+    label: Kinderwunsch Seiten
+    label_singular: Kinderwunsch Seite
+    folder: src/content/kinderwunsch
+    create: true
+    extension: mdx
+    format: frontmatter
+    identifier_field: slug
+    fields:
+      - { label: "Dateiname / Slug", name: "slug", widget: "string" }
+      - { label: Inhalt, name: body, widget: markdown }
+  - name: schwangerschaft
+    label: Schwangerschaft Seiten
+    label_singular: Schwangerschaft Seite
+    folder: src/content/schwangerschaft
+    create: true
+    extension: mdx
+    format: frontmatter
+    identifier_field: slug
+    fields:
+      - { label: "Dateiname / Slug", name: "slug", widget: "string" }
+      - { label: Inhalt, name: body, widget: markdown }
+  - name: frauenheilkunde
+    label: Frauenheilkunde Seiten
+    label_singular: Frauenheilkunde Seite
+    folder: src/content/frauenheilkunde
+    create: true
+    extension: mdx
+    format: frontmatter
+    identifier_field: slug
+    fields:
+      - { label: "Dateiname / Slug", name: "slug", widget: "string" }
+      - { label: Inhalt, name: body, widget: markdown }
+  - name: babyzeit
+    label: Babyzeit Seiten
+    label_singular: Babyzeit Seite
+    folder: src/content/babyzeit
+    create: true
+    extension: mdx
+    format: frontmatter
+    identifier_field: slug
+    fields:
+      - { label: "Dateiname / Slug", name: "slug", widget: "string" }
+      - { label: Inhalt, name: body, widget: markdown }
+  - name: kontakt
+    label: Kontakt Seiten
+    label_singular: Kontakt Seite
+    folder: src/content/kontakt
     create: true
     extension: mdx
     format: frontmatter
