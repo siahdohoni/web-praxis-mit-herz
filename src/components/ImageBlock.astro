@@ -1,18 +1,18 @@
 ---
-import {Image} from 'astro:assets';
-
 interface Props {
     title?: string;
     body: string;
     image: string;
     alt?: string;
+    position: 'left' | 'right';
+    width?: number;
 }
 
-const {title, body, image, alt = ''} = Astro.props as Props;
+const {title, body, image, alt = '', position = 'right', width = 300} = Astro.props as Props;
 ---
 <div class="ce_text block">
-  <figure class="image_container float_right">
-    <img src={image} alt={alt} title={alt} width="300"/>
+  <figure class={`image_container ${position === 'right' ? 'float_right' : 'float_left'}`}>
+    <img src={image} alt={alt} title={alt} width={width}/>
   </figure>
   <slot/>
 </div>

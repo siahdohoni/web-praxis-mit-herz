@@ -6,6 +6,14 @@ export const ImageBlock = {
   fields: [
     {label: 'Image', name: 'image', widget: 'image'},
     {label: 'Alt Text', name: 'alt', widget: 'string', required: false},
+    {
+      label: 'Position',
+      name: 'position',
+      widget: 'select',
+      options: ['left', 'right'],
+      default: 'right'
+    },
+    {label: 'Width', name: 'width', widget: 'number', default: 300, value_type: 'int'},
     {label: 'Body', name: 'body', widget: 'markdown'},
   ],
   // Match <ImageBlock image="..." alt="...">content</ImageBlock>
@@ -18,15 +26,17 @@ export const ImageBlock = {
   },
   toBlock: function (obj) {
     const {body, ...rest} = obj;
-    return `<ImageBlock ${toAttrString(rest, ['image', 'href', 'alt'])}>
+    return `<ImageBlock ${toAttrString(rest, ['image', 'href', 'alt', 'position', 'width'])}>
 ${body.trim() || ''}
 </ImageBlock>`;
   },
   toPreview: function (obj) {
+    const floatClass = obj.position === 'left' ? 'float_left' : 'float_right';
+    const width = obj.width || 300;
     return `
             <div class="ce_text block">
-              <figure class="image_container float_right">
-                <img src="${obj.image}" alt="${obj.alt || ''}" style="width: 300px;" />
+              <figure class="image_container ${floatClass}">
+                <img src="${obj.image}" alt="${obj.alt || ''}" style="width: ${width}px;" />
               </figure>
               <div>${obj.body || ''}</div>
             </div>
