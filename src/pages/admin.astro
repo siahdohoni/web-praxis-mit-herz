@@ -18,6 +18,7 @@
   import {JamedaEmbedding} from '../cms/components/JamedaEmbedding.js'
   import {Card} from '../cms/components/Card.js'
   import {ImageBlock} from '../cms/components/ImageBlock.js'
+  import {Image} from '../cms/components/Image.js'
   import {PagePreview} from "../cms/components/PagePreview.jsx";
 
     function register() {
@@ -30,6 +31,7 @@
         CMS.registerEditorComponent(JamedaEmbedding);
         CMS.registerEditorComponent(Card);
         CMS.registerEditorComponent(ImageBlock);
+        CMS.registerEditorComponent(Image);
 
         CMS.registerPreviewTemplate('page', PagePreview);
         CMS.registerPreviewTemplate('kinderwunsch', PagePreview);

@@ -1,0 +1,29 @@
+---
+interface Props {
+    image: string;
+    alt?: string;
+    position: 'left' | 'center' | 'right';
+    width?: number;
+}
+
+const {image, alt = '', position = 'left', width = 300} = Astro.props as Props;
+
+const getAlignmentStyle = (pos: string) => {
+    switch (pos) {
+        case 'left':
+            return 'text-align: left;';
+        case 'right':
+            return 'text-align: right;';
+        case 'center':
+            return 'text-align: center;';
+        default:
+            return 'text-align: left;';
+    }
+};
+---
+<p style={getAlignmentStyle(position)}>
+    <img src={image} alt={alt} title={alt} width={width}/>
+</p>
+
+<style>
+</style>
