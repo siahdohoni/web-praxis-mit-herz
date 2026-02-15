@@ -650,6 +650,10 @@ li.download-element {
     color: #ccc
 }
 
+#cboxLoadingGraphic {
+    background: url(icons/loading.gif) no-repeat center center
+}
+
 #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
     border: 0;
     padding: 0;
@@ -670,12 +674,45 @@ li.download-element {
     color: #fff
 }
 
+#cboxPrevious {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    margin-top: -32px;
+    background: url(/icons/controls.png) no-repeat top left;
+    width: 28px;
+    height: 65px;
+    text-indent: -9999px
+}
+
 #cboxPrevious:hover {
     background-position: bottom left
 }
 
+#cboxNext {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    margin-top: -32px;
+    background: url(/icons/controls.png) no-repeat top right;
+    width: 28px;
+    height: 65px;
+    text-indent: -9999px
+}
+
 #cboxNext:hover {
     background-position: bottom right
+}
+
+#cboxClose {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    background: url(/icons/controls.png) no-repeat top center;
+    width: 38px;
+    height: 19px;
+    text-indent: -9999px
 }
 
 #cboxClose:hover {
@@ -3336,6 +3373,49 @@ input.mobile-check {
     font-size: 1.4rem;
     font-weight: 600;
     top: -2.8rem
+}
+
+#cboxClose {
+    background-image: url(/icons/sprite-icons-colorbox.png);
+    background-repeat: no-repeat;
+    background-position: -7.1rem 0;
+    width: 3.7rem;
+    height: 4rem;
+    right: .1rem;
+    top: .1rem
+}
+
+#cboxClose:hover, #cboxClose:focus, #cboxClose:active {
+    background-image: url(/icons/sprite-icons-colorbox.png);
+    background-position: -7.1rem -4rem
+}
+
+#cboxNext {
+    background-image: url(/icons/sprite-icons-colorbox.png);
+    background-repeat: no-repeat;
+    background-position: -3.6rem 0;
+    width: 3.6rem;
+    height: 6.1rem;
+    right: -.1rem
+}
+
+#cboxNext:hover, #cboxNext:focus, #cboxNext:active {
+    background-image: url(/icons/sprite-icons-colorbox.png);
+    background-position: -3.6rem -6.1rem
+}
+
+#cboxPrevious {
+    background-image: url(/icons/sprite-icons-colorbox.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 3.6rem;
+    height: 6.1rem;
+    left: 0
+}
+
+#cboxPrevious:hover, #cboxPrevious:focus, #cboxPrevious:active {
+    background-image: url(/icons/sprite-icons-colorbox.png);
+    background-position: 0 -6.1rem
 }
 
 .grid1, .grid2, .grid3, .grid4 {

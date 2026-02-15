@@ -22,12 +22,12 @@ export function unescapeAttr(value) {
 export function parseAttrs(attrString) {
     const attrs = {};
     if (!attrString) return attrs;
-    // Match key="value" pairs; keys are alphanumeric and underscores
-    const regex = /(\w+)\s*=\s*"([\s\S]*?)"/g;
+    // Match key="value" or key='value' pairs; keys are alphanumeric and underscores
+    const regex = /(\w+)\s*=\s*(?:"([\s\S]*?)"|'([\s\S]*?)')/g;
     let m;
     while ((m = regex.exec(attrString)) !== null) {
         const key = m[1];
-        const raw = m[2];
+        const raw = m[2] !== undefined ? m[2] : m[3];
         attrs[key] = unescapeAttr(raw);
     }
     return attrs;

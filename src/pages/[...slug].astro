@@ -7,6 +7,7 @@ import ImageBlock from '../components/ImageBlock.astro';
 import Card from '../components/Card.astro';
 import Image from '../components/Image.astro';
 import SplitPage from '../components/SplitPage.astro';
+import ImageGallery from '../components/ImageGallery.astro';
 
 export async function getStaticPaths() {
     const pages = await getCollection('page');
@@ -21,5 +22,5 @@ const page = Astro.props;
 const { Content } = await render(page);
 ---
 <MainLayout>
-  <Content components={{JamedaEmbedding, DocToLibButton, ImageBlock, Card, Image, SplitPage}}/>
+  <Content components={{JamedaEmbedding, DocToLibButton, ImageBlock, Card, Image, SplitPage, ImageGallery}}/>
 </MainLayout>
