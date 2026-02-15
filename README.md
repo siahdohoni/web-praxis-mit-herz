@@ -4,7 +4,7 @@ Dieses Repository beinhaltet den Quellcode der Website der Praxis mit Herz.
 
 ## 🔍 Projektüberblick
 
-Diese Website dient als digitale Visitenkarte der Praxis und bietet u. a. Informationen zu:
+Diese Website dient als digitale Visitenkarte der Praxis und bietet u.a. Informationen zu:
 
 - Behandlungsschwerpunkte und Leistungen
 - Philosophie und Werte der Praxis
