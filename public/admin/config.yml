@@ -14,7 +14,7 @@ collections:
     identifier_field: slug
     fields:
       - { label: "Dateiname / Slug", name: "slug", widget: "string" }
-      - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'doctolibbutton', 'jamedaembedding'] }
+      - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'doctolibbutton', 'jamedaembedding', 'splitpage'] }
   - name: kinderwunsch
     label: Kinderwunsch Seiten
     label_singular: Kinderwunsch Seite
@@ -25,7 +25,7 @@ collections:
     identifier_field: slug
     fields:
       - { label: "Dateiname / Slug", name: "slug", widget: "string" }
-      - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'doctolibbutton', 'jamedaembedding'] }
+      - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'doctolibbutton', 'jamedaembedding', 'splitpage'] }
   - name: schwangerschaft
     label: Schwangerschaft Seiten
     label_singular: Schwangerschaft Seite
@@ -36,7 +36,7 @@ collections:
     identifier_field: slug
     fields:
       - { label: "Dateiname / Slug", name: "slug", widget: "string" }
-      - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'doctolibbutton', 'jamedaembedding'] }
+      - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'doctolibbutton', 'jamedaembedding', 'splitpage'] }
   - name: frauenheilkunde
     label: Frauenheilkunde Seiten
     label_singular: Frauenheilkunde Seite
@@ -47,7 +47,7 @@ collections:
     identifier_field: slug
     fields:
       - { label: "Dateiname / Slug", name: "slug", widget: "string" }
-      - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'doctolibbutton', 'jamedaembedding'] }
+      - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'doctolibbutton', 'jamedaembedding', 'splitpage'] }
   - name: babyzeit
     label: Babyzeit Seiten
     label_singular: Babyzeit Seite
@@ -58,7 +58,7 @@ collections:
     identifier_field: slug
     fields:
       - { label: "Dateiname / Slug", name: "slug", widget: "string" }
-      - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'doctolibbutton', 'jamedaembedding'] }
+      - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'doctolibbutton', 'jamedaembedding', 'splitpage'] }
   - name: kontakt
     label: Kontakt Seiten
     label_singular: Kontakt Seite
@@ -69,7 +69,7 @@ collections:
     identifier_field: slug
     fields:
       - { label: "Dateiname / Slug", name: "slug", widget: "string" }
-      - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'doctolibbutton', 'jamedaembedding'] }
+      - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'doctolibbutton', 'jamedaembedding', 'splitpage'] }
   - name: settings
     label: Einstellungen
     files:
