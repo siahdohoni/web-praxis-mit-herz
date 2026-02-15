@@ -47,7 +47,7 @@ Die Website ist dann unter [localhost:4321](http://localhost:4321) erreichbar.
 
 ## 📦 Deployment
 
-Die Website wird automatisch über GitHub Actions auf GitHub Pages bereitgestellt. 
+Die Website wird automatisch über GitHub Actions auf GitHub Pages bereitgestellt.
 Für benutzerdefinierte Domains wird eine CNAME-Datei im public/-Verzeichnis verwendet.
 
 ## 🧞 Befehlsübersicht
