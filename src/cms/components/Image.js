@@ -14,8 +14,9 @@ export const Image = {
       default: 'left'
     },
     {label: 'Width', name: 'width', widget: 'number', default: 300, value_type: 'int'},
+    {label: 'Rahmen hinzufügen', name: 'frame', widget: 'boolean', default: false},
   ],
-  // Match <Image image="..." alt="..." position="..." width="..." />
+  // Match <Image image="..." alt="..." position="..." width="..." frame="..." />
   pattern: /^\s*<Image\s+([^>]*?)\/>/m,
   fromBlock: function (match) {
     return {
@@ -27,11 +28,12 @@ export const Image = {
     if (obj.image) {
       obj.image = obj.image.replace(/ /g, '%20');
     }
-    return `<Image ${toAttrString(obj, ['image', 'alt', 'position', 'width'])}/>`;
+    return `<Image ${toAttrString(obj, ['image', 'alt', 'position', 'width', 'frame'])}/>`;
   },
   toPreview: function (obj) {
       const width = obj.width || 300;
       const imageSrc = obj.image ? obj.image.replace(/ /g, '%20') : '';
+      const withFrame = obj.frame === "true";
       const alignmentStyle = (pos) => {
           switch (pos) {
               case 'left':
@@ -44,10 +46,13 @@ export const Image = {
                   return 'text-align: left;';
           }
       };
-      return `
-            <p style="${alignmentStyle(obj.position)}">
-                <img src="${imageSrc}" alt="${obj.alt || ''}" style="width: ${width}px;" />
-            </p>
-        `;
+    return withFrame ?
+      `<div style="${alignmentStyle(obj.position)}">
+        <figure class="image_container">
+          <img src="${imageSrc}" alt="${obj.alt}" title="${obj.alt}" style="width: ${width}px;"/>
+        </figure>
+      </div>` : `<p style="${alignmentStyle(obj.position)}">
+        <img src="${imageSrc}" alt="${obj.alt}" title="${obj.alt}" style="width: ${width}px;"/>
+      </p>`
     }
   };

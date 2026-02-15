@@ -4,9 +4,10 @@ interface Props {
     alt?: string;
     position: 'left' | 'center' | 'right';
     width?: number;
+    frame?: string;
 }
 
-const {image, alt = '', position = 'left', width = 300} = Astro.props as Props;
+const {image, alt = '', position = 'left', width = 300, frame = "false"} = Astro.props as Props;
 
 const getAlignmentStyle = (pos: string) => {
     switch (pos) {
@@ -21,9 +22,17 @@ const getAlignmentStyle = (pos: string) => {
     }
 };
 ---
-<p style={getAlignmentStyle(position)}>
+{frame === "true" ? (
+<div style={getAlignmentStyle(position)}>
+  <figure class="image_container" style={getAlignmentStyle(position)}>
     <img src={image} alt={alt} title={alt} width={width}/>
+  </figure>
+</div>
+    ) : (
+<p style={getAlignmentStyle(position)}>
+  <img src={image} alt={alt} title={alt} width={width}/>
 </p>
+    )}
 
 <style>
 </style>
