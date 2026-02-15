@@ -25,6 +25,9 @@ const pageTitle = currentLink?.title || Astro.props.title || "Praxis mit Herz";
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <meta charset="utf-8"/>
     <link rel="icon" type="image/svg+xml" href="/favicon.ico"/>
+    <meta name="robots" content="index,follow">
+    <meta name="description" content={settings.siteDescription}>
+    <meta name="keywords" content={settings.keywords}>
     <meta name="viewport" content="width=device-width"/>
     <meta name="generator" content={Astro.generator}/>
     <title>{pageTitle + settings.siteTitleSuffix}</title>

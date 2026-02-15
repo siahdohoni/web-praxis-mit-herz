@@ -78,6 +78,8 @@ collections:
         file: src/settings/site-settings.json
         fields:
           - { label: Titel Suffix, name: siteTitleSuffix, widget: string }
+          - { label: Site Description, name: siteDescription, widget: string }
+          - { label: Keywords, name: keywords, widget: string }
       - name: navigation
         label: Navigation
         file: src/settings/navigation.json
