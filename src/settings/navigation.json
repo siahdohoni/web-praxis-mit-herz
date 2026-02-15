@@ -204,42 +204,42 @@
           "title": "Praxis",
           "href": "/kontakt/praxis",
           "header_img": "/images/Header_Kontakt-neu.jpg",
-          "show_in_header": false
+          "show_in_header": true
         },
         {
           "label": "Kontakt und Anfahrt",
           "title": "Kontakt und Anfahrt",
           "href": "/kontakt/kontakt-und-anfahrt",
           "header_img": "/images/Header_Kontakt-neu.jpg",
-          "show_in_header": false
+          "show_in_header": true
         },
         {
           "label": "Terminvereinbarung",
           "title": "Terminvereinbarung",
           "href": "/kontakt/terminvereinbarung",
           "header_img": "/images/Header_Kontakt-neu.jpg",
-          "show_in_header": false
+          "show_in_header": true
         },
         {
           "label": "Labordiagnostik",
           "title": "Labordiagnostik",
           "href": "/kontakt/labordiagnostik",
           "header_img": "/images/Header_Kontakt-neu.jpg",
-          "show_in_header": false
+          "show_in_header": true
         },
         {
           "label": "Honorar",
           "title": "Honorar",
           "href": "/kontakt/honorar",
           "header_img": "/images/Header_Kontakt-neu.jpg",
-          "show_in_header": false
+          "show_in_header": true
         },
         {
-          "label": "Hinweise zu Kostenerstattung",
-          "title": "Hinweise zu Kostenerstattung",
-          "href": "/kontakt/hinweise-zu-kostenerstattung",
+          "label": "Hinweise zur Kostenerstattung",
+          "title": "Hinweise zur Kostenerstattung",
+          "href": "/kontakt/hinweise-zur-kostenerstattung",
           "header_img": "/images/Header_Kontakt-neu.jpg",
-          "show_in_header": false
+          "show_in_header": true
         }
       ]
     },
