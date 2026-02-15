@@ -4,7 +4,7 @@
       "label": "Willkommen",
       "title": "Willkommen",
       "href": "/",
-      "header_img": "/images/Header-Startseite.jpg",
+      "header_img": "/images/Header_Startseite.jpg",
       "show_in_header": true,
       "sublinks": [
         {
@@ -20,28 +20,28 @@
       "label": "Kinderwunsch",
       "title": "Kinderwunsch",
       "href": "/kinderwunsch",
-      "header_img": "/images/Kinderwunsch.jpg",
+      "header_img": "/images/Header_Kinderwunsch.jpg",
       "show_in_header": true,
       "sublinks": [
         {
           "label": "Anamnese und Therapiekonzept",
           "title": "Anamnese und Therapiekonzept",
           "href": "/kinderwunsch/anamnese-und-therapiekonzept",
-          "header_img": "/images/Kinderwunsch.jpg",
+          "header_img": "/images/Header_Kinderwunsch.jpg",
           "show_in_header": true
         },
         {
           "label": "Fruchtbarkeitsmassage",
           "title": "Fruchtbarkeitsmassage",
           "href": "/kinderwunsch/fruchtbarkeitsmassage",
-          "header_img": "/images/Kinderwunsch.jpg",
+          "header_img": "/images/Header_Kinderwunsch.jpg",
           "show_in_header": true
         },
         {
           "label": "Osteopathie",
           "title": "Osteopathie",
           "href": "/kinderwunsch/osteopathie",
-          "header_img": "/images/Kinderwunsch.jpg",
+          "header_img": "/images/Header_Kinderwunsch.jpg",
           "show_in_header": true
         },
         {
@@ -55,7 +55,7 @@
           "label": "Männliche Fertilität",
           "title": "Männliche Fertilität",
           "href": "/kinderwunsch/männliche-fertilität",
-          "header_img": "/images/Mann_Kiwu.jpg",
+          "header_img": "/images/Header_Mann_Kiwu.jpg",
           "show_in_header": true
         }
       ]
@@ -64,28 +64,28 @@
       "label": "Schwangerschaft",
       "title": "Schwangerschaft",
       "href": "/schwangerschaft",
-      "header_img": "/images/Schwangerschaft.jpg",
+      "header_img": "/images/Header_Schwangerschaft.jpg",
       "show_in_header": true,
       "sublinks": [
         {
           "label": "Naturheilkunde und Homöopathie",
           "title": "Naturheilkunde und Homöopathie",
           "href": "/schwangerschaft/naturheilkunde-und-homöopathie",
-          "header_img": "/images/Schwangerschaft.jpg",
+          "header_img": "/images/Header_Schwangerschaft.jpg",
           "show_in_header": true
         },
         {
           "label": "Osteopathie",
           "title": "Osteopathie",
-          "href": "/schwangerschaft/osteopathie-schwangerschaft",
-          "header_img": "/images/Schwangerschaft.jpg",
+          "href": "/schwangerschaft/osteopathie",
+          "header_img": "/images/Header_Schwangerschaft.jpg",
           "show_in_header": true
         },
         {
           "label": "Schwangerschaftsmassage",
           "title": "Schwangerschaftsmassage",
           "href": "/schwangerschaft/schwangerschaftsmassage",
-          "header_img": "/images/Schwangerschaft.jpg",
+          "header_img": "/images/Header_Schwangerschaft.jpg",
           "show_in_header": true
         },
         {
@@ -136,14 +136,14 @@
           "label": "Wechseljahre",
           "title": "Wechseljahre",
           "href": "/frauenheilkunde/wechseljahre",
-          "header_img": "/images/Header-Wechseljahre_\\ Erschöpfung.jpg",
+          "header_img": "/images/Header_Wechseljahre_\\ Erschöpfung.jpg",
           "show_in_header": true
         },
         {
           "label": "Chronische Erschöpfung und Müdigkeit",
           "title": "Chronische Erschöpfung und Müdigkeit",
           "href": "/frauenheilkunde/chronische-erschöpfung-und-müdigkeit",
-          "header_img": "/images/Header-Wechseljahre_\\ Erschöpfung.jpg",
+          "header_img": "/images/Header_Wechseljahre_\\ Erschöpfung.jpg",
           "show_in_header": true
         },
         {
@@ -263,7 +263,7 @@
       "label": "Datenschutz",
       "title": "Datenschutz",
       "href": "/datenschutz",
-      "header_img": "/images/Header-Startseite.jpg",
+      "header_img": "/images/Header_Startseite.jpg",
       "show_in_header": false,
       "sublinks": []
     },
@@ -271,7 +271,7 @@
       "label": "Impressum",
       "title": "Impressum",
       "href": "/impressum",
-      "header_img": "/images/Header-Startseite.jpg",
+      "header_img": "/images/Header_Startseite.jpg",
       "show_in_header": false,
       "sublinks": []
     }
