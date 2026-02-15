@@ -23,6 +23,22 @@ export const PagePreview = window.createClass({
     }
     const normalizedCurrentPath = normalize(currentHref);
 
+    // Helper to convert frontend URL to Decap admin URL
+    const getAdminHref = (frontendHref) => {
+      const path = normalize(frontendHref);
+      if (path === '/') return '/admin#/collections/page/entries/index';
+
+      const parts = path.split('/').filter(Boolean);
+      if (parts.length === 1) {
+          // Top level page
+          return `/admin#/collections/page/entries/${parts[0]}`;
+      } else if (parts.length === 2) {
+          // Subfolder collection
+          return `/admin#/collections/${parts[0]}/entries/${parts[1]}`;
+      }
+      return '#';
+    };
+
     const allLinks = navigation.links.flatMap(link => [
       link,
       ...(link.sublinks || [])
@@ -61,7 +77,7 @@ export const PagePreview = window.createClass({
                 h('div', { className: 'innerwrapper' },
                   h('div', { className: 'logo' },
                     h('div', {},
-                      h('a', { href: '#', title: 'Startseite' },
+                      h('a', { href: getAdminHref('/'), title: 'Startseite' },
                         h('img', { src: '/images/logo.png', alt: 'Logo Heilpraktikerin Simone Schulz' })
                       )
                     )
@@ -78,16 +94,16 @@ export const PagePreview = window.createClass({
                 h('div', { className: 'nav-wrapper' },
                   h('nav', { className: 'mod_navigation nav_main block' },
                     h('ul', { className: 'level_1' },
-                      navigation.links.map(l => {
+                      navigation.links.filter(l => l.show_in_header !== false).map(l => {
                         const isActive = normalize(l.href) === normalizedCurrentPath;
                         const isSubActive = l.sublinks?.some(s => normalize(s.href) === normalizedCurrentPath);
                         return h('li', { className: 'submenu' },
-                          isActive ? h('span', { className: 'active' }, l.label) : h('a', { href: '#', className: isSubActive ? 'trail' : '' }, l.label),
+                          isActive ? h('span', { className: 'active' }, l.label) : h('a', { href: getAdminHref(l.href), className: isSubActive ? 'trail' : '' }, l.label),
                           l.sublinks && l.sublinks.length > 0 && h('ul', { className: 'level_2' },
-                            l.sublinks.map(s => {
+                            l.sublinks.filter(s => s.show_in_header !== false).map(s => {
                               const isSubActive = normalize(s.href) === normalizedCurrentPath;
                               return h('li', {},
-                                isSubActive ? h('span', { className: 'active' }, s.label) : h('a', { href: '#' }, s.label)
+                                isSubActive ? h('span', { className: 'active' }, s.label) : h('a', { href: getAdminHref(s.href) }, s.label)
                               );
                             })
                           )
@@ -98,10 +114,10 @@ export const PagePreview = window.createClass({
                 ),
                 h('nav', { className: 'mod_breadcrumb block' },
                   h('ul', {},
-                    h('li', { className: 'first' }, h('a', { href: '#' }, 'Heilpraktikerin Simone Schulz Frankfurt')),
-                    breadcrumbs.map((crumb, index) => 
+                    h('li', { className: 'first' }, h('a', { href: getAdminHref('/') }, 'Heilpraktikerin Simone Schulz Frankfurt')),
+                    breadcrumbs.map((crumb, index) =>
                       h('li', { className: index === breadcrumbs.length - 1 ? "active last" : "" },
-                        index === breadcrumbs.length - 1 ? crumb.label : h('a', { href: '#' }, crumb.label)
+                        index === breadcrumbs.length - 1 ? crumb.label : h('a', { href: getAdminHref(crumb.href) }, crumb.label)
                       )
                     )
                   )
@@ -122,8 +138,8 @@ export const PagePreview = window.createClass({
             h('div', { className: 'inside' },
               h('nav', { className: 'mod_navigation nav_meta block' },
                 h('ul', { className: 'level_1' },
-                  h('li', { className: 'first' }, h('a', { href: '#' }, 'Impressum')),
-                  h('li', { className: 'last' }, h('a', { href: '#' }, 'Datenschutz'))
+                  h('li', { className: 'first' }, h('a', { href: getAdminHref('/impressum') }, 'Impressum')),
+                  h('li', { className: 'last' }, h('a', { href: getAdminHref('/datenschutz') }, 'Datenschutz'))
                 )
               ),
               h('div', { className: 'footer-content' },
@@ -138,8 +154,8 @@ export const PagePreview = window.createClass({
                     h('div', { style: { width: '97px', height: '145px', margin: '15px 25px', backgroundImage: 'url(https://cdn1.jameda-elements.de/premium/widgets/_images/bw-small-bg.png)', backgroundRepeat: 'no-repeat' } })
                   ),
                   h('div', { className: 'ce_text grid1 block' },
-                    h('p', { style: { textAlign: 'right' } }, 
-                      h('a', { href: '#' },
+                    h('p', { style: { textAlign: 'right' } },
+                      h('a', { href: getAdminHref('/über-mich') },
                         h('img', { src: '/images/7dd71608-63bd-4a32-a2c6-fb56540f7826.jpg', alt: 'Heilpraktikerin Simone Schulz, Frankfurt', width: '150' })
                       )
                     )
