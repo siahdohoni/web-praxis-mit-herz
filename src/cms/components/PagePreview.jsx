@@ -4,6 +4,7 @@ export const PagePreview = window.createClass({
   render: function() {
     const { entry, widgetFor, getAsset } = this.props;
     const slug = entry.getIn(['data', 'slug']) || '';
+    const collection = entry.get('collection');
     
     // Normalize path similar to MainLayout
     const normalize = (path) => {
@@ -13,10 +14,13 @@ export const PagePreview = window.createClass({
       return p;
     };
     
-    // We assume the slug in the CMS corresponds to the href (or part of it)
-    // Actually, slugs in this project seem to be just the filename.
-    // Index page slug is "index".
-    const currentHref = slug === 'index' ? '/' : (slug.startsWith('/') ? slug : '/' + slug);
+    // Construct href based on collection and slug
+    let currentHref = '';
+    if (collection === 'page') {
+      currentHref = slug === 'index' ? '/' : (slug.startsWith('/') ? slug : '/' + slug);
+    } else {
+      currentHref = `/${collection}/${slug}`;
+    }
     const normalizedCurrentPath = normalize(currentHref);
 
     const allLinks = navigation.links.flatMap(link => [
@@ -26,7 +30,7 @@ export const PagePreview = window.createClass({
 
     const currentLink = allLinks.find(link => normalize(link.href) === normalizedCurrentPath);
     const pageTitle = currentLink?.title || entry.getIn(['data', 'title']) || "Praxis mit Herz";
-    const headerImage = currentLink?.header_img || '/images/Header-Startseite.jpg';
+    const headerImage = currentLink?.header_img || '/images/Header_Startseite.jpg';
 
     // Breadcrumbs
     let breadcrumbs = [];
@@ -66,7 +70,7 @@ export const PagePreview = window.createClass({
                 h('div', { className: 'mod_article headerimage block' },
                   h('div', { className: 'ce_gallery block' },
                     h('ul', {},
-                      h('li', { style: { backgroundImage: `url(${headerImage})`, height: '300px', backgroundSize: 'cover', backgroundPosition: 'center' } })
+                      h('li', { style: { backgroundImage: `url(${getAsset(headerImage)})`, height: '300px', backgroundSize: 'cover', backgroundPosition: 'center' } })
                     )
                   )
                 ),
