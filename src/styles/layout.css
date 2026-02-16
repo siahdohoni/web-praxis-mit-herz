@@ -651,7 +651,7 @@ li.download-element {
 }
 
 #cboxLoadingGraphic {
-    background: url(icons/loading.gif) no-repeat center center
+    background: url(/icons/loading.gif) no-repeat center center
 }
 
 #cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
@@ -3057,7 +3057,7 @@ aside .mod_navigation li.submenu li, aside .mod_newsmenu li.submenu li {
 
 .mod_search input.submit, .mod_search button.submit {
     border: 0;
-    background-image: url(icons/icon-search.svg);
+    background-image: url(/icons/icon-search.svg);
     background-repeat: no-repeat;
     background-position: center center;
     text-indent: -9999px !important;
@@ -3153,32 +3153,32 @@ header .right-elements .mod_search input {
 }
 
 .social-wrapper .social-content .social-fb {
-        background-image: url(icons/icon-social-facebook.svg);
+        background-image: url(/icons/icon-social-facebook.svg);
     background-repeat: no-repeat;
     background-position: center center
 }
 
 .social-wrapper .social-content .social-twitter {
-    background-image: url(icons/icon-social-twitter.svg);
+    background-image: url(/icons/icon-social-twitter.svg);
     background-repeat: no-repeat;
     background-position: center center
 }
 
 .social-wrapper .social-content .social-gplus {
-    background-image: url(icons/icon-social-gplus.svg);
+    background-image: url(/icons/icon-social-gplus.svg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 98%
 }
 
 .social-wrapper .social-content .social-linkedin {
-    background-image: url(icons/icon-social-linkedin.svg);
+    background-image: url(/icons/icon-social-linkedin.svg);
     background-repeat: no-repeat;
     background-position: center center
 }
 
 .social-wrapper .social-content .social-instagram {
-    background-image: url(icons/icon-social-instagram.svg);
+    background-image: url(/icons/icon-social-instagram.svg);
     background-repeat: no-repeat;
     background-position: center center
 }
@@ -3969,7 +3969,7 @@ body.sidebar #main:after, .ce_text:after, .innerwrapper:after, .mod_breadcrumb:a
 
     .button-nav-mobile:hover, .button-nav-mobile:focus, .button-nav-mobile:active {
         cursor: pointer;
-        background: url(icons/icon-nav.png) 90% 50% no-repeat;
+        background: url(/icons/icon-nav.png) 90% 50% no-repeat;
         background-size: 3rem 2.4rem
     }
 
