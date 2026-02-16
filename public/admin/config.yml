@@ -2,6 +2,7 @@ backend:
   name: github
   repo: siahdohoni/web-praxis-mit-herz
   branch: main
+publish_mode: editorial_workflow
 media_folder: "public/images"
 public_folder: "/images"
 collections:
