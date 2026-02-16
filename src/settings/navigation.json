@@ -11,7 +11,7 @@
           "label": "Über mich",
           "title": "Über mich",
           "href": "/über-mich",
-          "header_img": "/images/Header_Übermichund\\ Seminare.jpg",
+          "header_img": "/images/Header_Übermichund\\ Seminare.jpg",
           "show_in_header": true
         }
       ]
@@ -48,7 +48,7 @@
           "label": "Kinderwunschhypnose",
           "title": "Kinderwunschhypnose",
           "href": "/kinderwunsch/kinderwunschhypnose",
-          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
+          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
           "show_in_header": true
         },
         {
@@ -92,14 +92,14 @@
           "label": "Geburtsvorbereitende Hypnose",
           "title": "Geburtsvorbereitende Hypnose",
           "href": "/schwangerschaft/geburtsvorbereitende-hypnose",
-          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
+          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
           "show_in_header": true
         },
         {
           "label": "Schwangerschaftsyoga",
           "title": "Schwangerschaftsyoga",
           "href": "/schwangerschaft/schwangerschaftsyoga",
-          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
+          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
           "show_in_header": true
         }
       ]
@@ -136,21 +136,21 @@
           "label": "Wechseljahre",
           "title": "Wechseljahre",
           "href": "/frauenheilkunde/wechseljahre",
-          "header_img": "/images/Header_Wechseljahre_\\ Erschöpfung.jpg",
+          "header_img": "/images/Header_Wechseljahre_\\ Erschöpfung.jpg",
           "show_in_header": true
         },
         {
           "label": "Chronische Erschöpfung und Müdigkeit",
           "title": "Chronische Erschöpfung und Müdigkeit",
           "href": "/frauenheilkunde/chronische-erschöpfung-und-müdigkeit",
-          "header_img": "/images/Header_Wechseljahre_\\ Erschöpfung.jpg",
+          "header_img": "/images/Header_Wechseljahre_\\ Erschöpfung.jpg",
           "show_in_header": true
         },
         {
           "label": "Ernährungsberatung und Gewichtsregulation",
           "title": "Ernährungsberatung und Gewichtsregulation",
           "href": "/frauenheilkunde/ernährungsberatung-und-gewichtsregulation",
-          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
+          "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
           "show_in_header": true
         }
       ]
@@ -247,14 +247,14 @@
       "label": "Seminare",
       "title": "Seminare",
       "href": "/seminare",
-      "header_img": "/images/Header_Übermichund\\ Seminare.jpg",
+      "header_img": "/images/Header_Übermichund\\ Seminare.jpg",
       "show_in_header": true,
       "sublinks": [
         {
           "label": "Anmeldung Seminar",
           "title": "Anmeldung Seminar",
           "href": "/seminare/anmeldung-seminar",
-          "header_img": "/images/Header_Übermichund\\ Seminare.jpg",
+          "header_img": "/images/Header_Übermichund\\ Seminare.jpg",
           "show_in_header": false
         }
       ]
