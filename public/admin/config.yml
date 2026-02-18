@@ -78,6 +78,8 @@ collections:
       - name: site-settings
         label: Seiteneinstellungen
         file: src/settings/site-settings.json
+        editor:
+          preview: false
         fields:
           - { label: Titel Suffix, name: siteTitleSuffix, widget: string }
           - { label: Site Description, name: siteDescription, widget: string }
@@ -90,6 +92,8 @@ collections:
       - name: navigation
         label: Navigation
         file: src/settings/navigation.json
+        editor:
+          preview: false
         fields:
           - label: Links
             name: links
