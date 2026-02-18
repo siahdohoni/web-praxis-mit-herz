@@ -1,4 +1,5 @@
 import {parseAttrs, toAttrString} from '../utils.js';
+import { marked } from "marked";
 
 export const SplitPage = {
   id: 'splitpage',
@@ -38,11 +39,14 @@ export const SplitPage = {
   </div>
 </SplitPage>`;
   },
-  toPreview: function (obj) {
+    toPreview: function (obj, getAsset) {
+      // Convert markdown to HTML
+      const slot1Html = marked.parse(obj.slot1 || '');
+      const slot2Html = marked.parse(obj.slot2 || '');
     return `
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-        <div>${obj.slot1 || ''}</div>
-        <div>${obj.slot2 || ''}</div>
+        <div>${slot1Html}</div>
+        <div>${slot2Html}</div>
       </div>
     `;
   }

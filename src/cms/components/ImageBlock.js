@@ -1,4 +1,5 @@
 import {parseAttrs, toAttrString} from '../utils.js';
+import { marked } from "marked";
 
 export const ImageBlock = {
   id: 'imageblock',
@@ -30,16 +31,22 @@ export const ImageBlock = {
 ${body.trim() || ''}
 </ImageBlock>`;
   },
-  toPreview: function (obj) {
+  toPreview: function (obj, getAsset) {
     const floatClass = obj.position === 'left' ? 'float_left' : 'float_right';
     const width = obj.width || 300;
+
+    const image = obj.image ? getAsset(obj.image)?.toString() : '';
+
+    // Convert markdown to HTML
+    const bodyHtml = marked.parse(obj.body || '');
+
     return `
-            <div class="ce_text block">
-              <figure class="image_container ${floatClass}">
-                <img src="${obj.image}" alt="${obj.alt || ''}" style="width: ${width}px;" />
-              </figure>
-              <div>${obj.body || ''}</div>
-            </div>
-        `;
+      <div class="ce_text block">
+        <figure class="image_container ${floatClass}">
+          <img src="${image}" alt="${obj.alt || ''}" style="width: ${width}px;" />
+        </figure>
+        <div>${bodyHtml}</div>
+      </div>
+    `;
   }
 };

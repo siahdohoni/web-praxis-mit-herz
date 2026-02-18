@@ -1,4 +1,5 @@
 import {parseAttrs, toAttrString} from '../utils.js';
+import { marked } from "marked";
 
 export const Card = {
   id: 'card',
@@ -23,15 +24,20 @@ export const Card = {
 ${body.trim() || ''}
 </Card>`;
   },
-  toPreview: function (obj) {
+  toPreview: function (obj, getAsset) {
+    const image = obj.image ? getAsset(obj.image)?.toString() : '';
+
+    // Convert markdown to HTML
+    const bodyHtml = marked.parse(obj.body || '');
+
     return `
 <div class="ce_text grid1 block">
   <figure class="image_container float_above">
     <a href="${obj.href || ''}" title="${obj.alt || ''}">
-      <img src="${obj.image}" alt="${obj.alt || ''}" title="${obj.alt || ''}" style="width: 300px;" />
+      <img src="${image}" alt="${obj.alt || ''}" title="${obj.alt || ''}" style="width: 300px;" />
     </a>
   </figure>
-    ${obj.body || ''}
+    ${bodyHtml}
 </div>`;
   }
 };
