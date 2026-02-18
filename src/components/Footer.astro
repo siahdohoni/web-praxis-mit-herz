@@ -1,4 +1,7 @@
 ---
+import settings from "../settings/site-settings.json";
+import { marked } from "marked";
+const footerText = marked.parse(settings.footer || '');
 ---
 <footer id="footer">
   <div class="inside">
@@ -17,12 +20,7 @@
     <!-- indexer::continue -->
     <div class="footer-content">
       <div class="mod_article block" id="article-18">
-        <div class="ce_text grid2 block">
-          <h4>Heilpraktikerin Simone Schulz</h4>
-          <p>Seckbacher Landstr. 74<br>Erdgeschoss links<br>60389 Frankfurt</p>
-          <p>Nußallee 7<br>Gebäude C / 2. OG<br>63450 Hanau</p>
-          <p>Telefon: <a href="tel:+491601536183">01601536183</a><br>Email: <a
-            href="mailto:info@praxismitherz.net">info@praxismitherz.net</a></p>
+        <div class="ce_text grid2 block" set:html={footerText}>
         </div>
         <div class="ce_text grid1 block">
           <div id="jameda-widget-container1716104"
