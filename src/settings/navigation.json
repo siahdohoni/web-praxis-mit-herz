@@ -4,6 +4,7 @@
       "label": "Willkommen",
       "title": "Willkommen",
       "href": "/",
+      "priority": 1,
       "header_img": "/images/Header_Startseite.jpg",
       "show_in_header": true,
       "sublinks": [
@@ -11,6 +12,7 @@
           "label": "Über mich",
           "title": "Über mich",
           "href": "/über-mich",
+          "priority": 0.9,
           "header_img": "/images/Header_Übermichund\\ Seminare.jpg",
           "show_in_header": true
         }
@@ -20,6 +22,7 @@
       "label": "Kinderwunsch",
       "title": "Kinderwunsch",
       "href": "/kinderwunsch",
+      "priority": 0.5,
       "header_img": "/images/Header_Kinderwunsch.jpg",
       "show_in_header": true,
       "sublinks": [
@@ -27,6 +30,7 @@
           "label": "Anamnese und Therapiekonzept",
           "title": "Anamnese und Therapiekonzept",
           "href": "/kinderwunsch/anamnese-und-therapiekonzept",
+          "priority": 0.9,
           "header_img": "/images/Header_Kinderwunsch.jpg",
           "show_in_header": true
         },
@@ -34,6 +38,7 @@
           "label": "Fruchtbarkeitsmassage",
           "title": "Fruchtbarkeitsmassage",
           "href": "/kinderwunsch/fruchtbarkeitsmassage",
+          "priority": 0.8,
           "header_img": "/images/Header_Kinderwunsch.jpg",
           "show_in_header": true
         },
@@ -41,6 +46,7 @@
           "label": "Osteopathie",
           "title": "Osteopathie",
           "href": "/kinderwunsch/osteopathie",
+          "priority": 0.8,
           "header_img": "/images/Header_Kinderwunsch.jpg",
           "show_in_header": true
         },
@@ -48,6 +54,7 @@
           "label": "Kinderwunschhypnose",
           "title": "Kinderwunschhypnose",
           "href": "/kinderwunsch/kinderwunschhypnose",
+          "priority": 0.8,
           "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
           "show_in_header": true
         },
@@ -55,6 +62,7 @@
           "label": "Männliche Fertilität",
           "title": "Männliche Fertilität",
           "href": "/kinderwunsch/männliche-fertilität",
+          "priority": 0.8,
           "header_img": "/images/Header_Mann_Kiwu.jpg",
           "show_in_header": true
         }
@@ -64,6 +72,7 @@
       "label": "Schwangerschaft",
       "title": "Schwangerschaft",
       "href": "/schwangerschaft",
+      "priority": 0.5,
       "header_img": "/images/Header_Schwangerschaft.jpg",
       "show_in_header": true,
       "sublinks": [
@@ -71,6 +80,7 @@
           "label": "Naturheilkunde und Homöopathie",
           "title": "Naturheilkunde und Homöopathie",
           "href": "/schwangerschaft/naturheilkunde-und-homöopathie",
+          "priority": 0.9,
           "header_img": "/images/Header_Schwangerschaft.jpg",
           "show_in_header": true
         },
@@ -78,6 +88,7 @@
           "label": "Osteopathie",
           "title": "Osteopathie",
           "href": "/schwangerschaft/osteopathie",
+          "priority": 0.8,
           "header_img": "/images/Header_Schwangerschaft.jpg",
           "show_in_header": true
         },
@@ -85,6 +96,7 @@
           "label": "Schwangerschaftsmassage",
           "title": "Schwangerschaftsmassage",
           "href": "/schwangerschaft/schwangerschaftsmassage",
+          "priority": 0.8,
           "header_img": "/images/Header_Schwangerschaft.jpg",
           "show_in_header": true
         },
@@ -92,6 +104,7 @@
           "label": "Geburtsvorbereitende Hypnose",
           "title": "Geburtsvorbereitende Hypnose",
           "href": "/schwangerschaft/geburtsvorbereitende-hypnose",
+          "priority": 0.8,
           "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
           "show_in_header": true
         },
@@ -99,6 +112,7 @@
           "label": "Schwangerschaftsyoga",
           "title": "Schwangerschaftsyoga",
           "href": "/schwangerschaft/schwangerschaftsyoga",
+          "priority": 0.8,
           "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
           "show_in_header": true
         }
@@ -108,6 +122,7 @@
       "label": "Frauenheilkunde",
       "title": "Frauenheilkunde",
       "href": "/frauenheilkunde",
+      "priority": 0.5,
       "header_img": "/images/Header_Frauenheilkund.jpg",
       "show_in_header": true,
       "sublinks": [
@@ -115,6 +130,7 @@
           "label": "Hormonhaushalt",
           "title": "Hormonhaushalt",
           "href": "/frauenheilkunde/hormonhaushalt",
+          "priority": 0.9,
           "header_img": "/images/Header_Frauenheilkund.jpg",
           "show_in_header": true
         },
@@ -122,6 +138,7 @@
           "label": "Schilddrüse",
           "title": "Schilddrüse",
           "href": "/frauenheilkunde/schilddrüse",
+          "priority": 0.8,
           "header_img": "/images/Header_Frauenheilkund.jpg",
           "show_in_header": true
         },
@@ -129,6 +146,7 @@
           "label": "Osteopathie",
           "title": "Osteopathie",
           "href": "/frauenheilkunde/osteopathie",
+          "priority": 0.8,
           "header_img": "/images/Header_Frauenheilkund.jpg",
           "show_in_header": true
         },
@@ -136,6 +154,7 @@
           "label": "Wechseljahre",
           "title": "Wechseljahre",
           "href": "/frauenheilkunde/wechseljahre",
+          "priority": 0.8,
           "header_img": "/images/Header_Wechseljahre_\\ Erschöpfung.jpg",
           "show_in_header": true
         },
@@ -143,6 +162,7 @@
           "label": "Chronische Erschöpfung und Müdigkeit",
           "title": "Chronische Erschöpfung und Müdigkeit",
           "href": "/frauenheilkunde/chronische-erschöpfung-und-müdigkeit",
+          "priority": 0.8,
           "header_img": "/images/Header_Wechseljahre_\\ Erschöpfung.jpg",
           "show_in_header": true
         },
@@ -150,6 +170,7 @@
           "label": "Ernährungsberatung und Gewichtsregulation",
           "title": "Ernährungsberatung und Gewichtsregulation",
           "href": "/frauenheilkunde/ernährungsberatung-und-gewichtsregulation",
+          "priority": 0.8,
           "header_img": "/images/Header_Hypnose,Yoga,\\ Massage;\\ Ernährung.jpg",
           "show_in_header": true
         }
@@ -159,6 +180,7 @@
       "label": "Babyzeit",
       "title": "Babyzeit",
       "href": "/babyzeit",
+      "priority": 0.5,
       "header_img": "/images/Babyzeit.jpg",
       "show_in_header": true,
       "sublinks": [
@@ -166,6 +188,7 @@
           "label": "Baby- und Kinderosteopathie",
           "title": "Baby- und Kinderosteopathie",
           "href": "/babyzeit/baby-und-kinderosteopathie",
+          "priority": 0.9,
           "header_img": "/images/Babyzeit.jpg",
           "show_in_header": true
         },
@@ -173,6 +196,7 @@
           "label": "Babymassage",
           "title": "Babymassage",
           "href": "/babyzeit/babymassage",
+          "priority": 0.8,
           "header_img": "/images/Babyzeit.jpg",
           "show_in_header": true
         },
@@ -180,6 +204,7 @@
           "label": "Naturheilkunde und Homöopathie",
           "title": "Naturheilkunde und Homöopathie",
           "href": "/babyzeit/naturheilkunde-und-homöopathie",
+          "priority": 0.8,
           "header_img": "/images/Babyzeit.jpg",
           "show_in_header": true
         },
@@ -187,6 +212,7 @@
           "label": "Motorische Entwicklung",
           "title": "Motorische Entwicklung",
           "href": "/babyzeit/motorische-entwicklung",
+          "priority": 0.8,
           "header_img": "/images/Babyzeit.jpg",
           "show_in_header": true
         }
@@ -196,6 +222,7 @@
       "label": "Kontakt",
       "title": "Kontakt",
       "href": "/kontakt",
+      "priority": 0.5,
       "header_img": "/images/Header_Kontakt-neu.jpg",
       "show_in_header": true,
       "sublinks": [
@@ -203,6 +230,7 @@
           "label": "Praxis",
           "title": "Praxis",
           "href": "/kontakt/praxis",
+          "priority": 0.6,
           "header_img": "/images/Header_Kontakt-neu.jpg",
           "show_in_header": true
         },
@@ -210,6 +238,7 @@
           "label": "Kontakt und Anfahrt",
           "title": "Kontakt und Anfahrt",
           "href": "/kontakt/kontakt-und-anfahrt",
+          "priority": 0.8,
           "header_img": "/images/Header_Kontakt-neu.jpg",
           "show_in_header": true
         },
@@ -217,6 +246,7 @@
           "label": "Terminvereinbarung",
           "title": "Terminvereinbarung",
           "href": "/kontakt/terminvereinbarung",
+          "priority": 0.9,
           "header_img": "/images/Header_Kontakt-neu.jpg",
           "show_in_header": true
         },
@@ -224,6 +254,7 @@
           "label": "Labordiagnostik",
           "title": "Labordiagnostik",
           "href": "/kontakt/labordiagnostik",
+          "priority": 0.6,
           "header_img": "/images/Header_Kontakt-neu.jpg",
           "show_in_header": true
         },
@@ -231,6 +262,7 @@
           "label": "Honorar",
           "title": "Honorar",
           "href": "/kontakt/honorar",
+          "priority": 0.4,
           "header_img": "/images/Header_Kontakt-neu.jpg",
           "show_in_header": true
         },
@@ -238,6 +270,7 @@
           "label": "Hinweise zur Kostenerstattung",
           "title": "Hinweise zur Kostenerstattung",
           "href": "/kontakt/hinweise-zur-kostenerstattung",
+          "priority": 0.5,
           "header_img": "/images/Header_Kontakt-neu.jpg",
           "show_in_header": true
         }
@@ -247,6 +280,7 @@
       "label": "Seminare",
       "title": "Seminare",
       "href": "/seminare",
+      "priority": 0.7,
       "header_img": "/images/Header_Übermichund\\ Seminare.jpg",
       "show_in_header": true,
       "sublinks": [
@@ -254,6 +288,7 @@
           "label": "Anmeldung Seminar",
           "title": "Anmeldung Seminar",
           "href": "/seminare/anmeldung-seminar",
+          "priority": 0.3,
           "header_img": "/images/Header_Übermichund\\ Seminare.jpg",
           "show_in_header": false
         }
@@ -263,6 +298,7 @@
       "label": "Datenschutz",
       "title": "Datenschutz",
       "href": "/datenschutz",
+      "priority": 0.3,
       "header_img": "/images/Header_Startseite.jpg",
       "show_in_header": false,
       "sublinks": []
@@ -271,6 +307,7 @@
       "label": "Impressum",
       "title": "Impressum",
       "href": "/impressum",
+      "priority": 0.3,
       "header_img": "/images/Header_Startseite.jpg",
       "show_in_header": false,
       "sublinks": []
