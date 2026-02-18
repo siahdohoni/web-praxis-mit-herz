@@ -28,8 +28,7 @@ const normalize = (path: string) => decodeURIComponent(path).replace(/\/$/, '') 
 const normalizedCurrentPath = normalize(currentPath);
 ---
 <nav class="mod_navigation nav_main block" role="off-canvas">
-  <a href="#skipNavigation52"
-     class="invisible">Navigation überspringen</a>
+  <a href="#main" class="invisible">Navigation überspringen</a>
   <ul class="level_1">
       {
           links.filter((l) => {
@@ -40,8 +39,9 @@ const normalizedCurrentPath = normalize(currentPath);
               return (
                 <li class="submenu">
                     {isActive ?
-                        (<span class={isActive ? 'active' : ''}>{l.label}</span>) :
-                        (<a href={l.href} title={l.title} class={isSubActive ? 'trail' : ''}>{l.label}</a>)}
+                        (<span class={isActive ? 'active' : ''}>{l.label}</span>)
+                        : (<a href={l.href} title={l.title} class={isSubActive ? 'trail' : ''}>{l.label}</a>)
+                    }
                     {Array.isArray(l.sublinks) && l.sublinks.length > 0 ? (
                       <ul class="level_2">
                           {l.sublinks.filter((l) => {
@@ -51,9 +51,9 @@ const normalizedCurrentPath = normalize(currentPath);
                               return (
                                 <li>
                                     {isSubActive ?
-                                        (<span
-                                          class={isSubActive ? 'active' : ''}>{s.label}</span>) :
-                                        (<a href={s.href} title={s.title}>{s.label}</a>)}
+                                        (<span class={isSubActive ? 'active' : ''}>{s.label}</span>)
+                                        : (<a href={s.href} title={s.title}>{s.label}</a>)
+                                    }
                                 </li>
                               );
                           })}
@@ -64,7 +64,4 @@ const normalizedCurrentPath = normalize(currentPath);
           })
       }
   </ul>
-
-
-  <a id="skipNavigation52" class="invisible">&nbsp;</a>
 </nav>

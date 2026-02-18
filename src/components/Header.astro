@@ -51,10 +51,6 @@ import Navbar from "./Navbar.astro";
         </div>
       </div>
       <div class="right-elements">
-        <!-- activate these elements in layout -->
-        <!-- login button -->
-        <!-- search field -->
-        <!-- social buttons -->
       </div>
     </div>
     <div class="mod_article headerimage block" id="article-124">
@@ -66,19 +62,17 @@ import Navbar from "./Navbar.astro";
         </ul>
       </div>
     </div>
-    <!-- leave this in as long as no article content is in the header -->
     <div class="placeholder"></div>
     <div class="nav-wrapper">
-      <!-- indexer::stop -->
       <Navbar/>
-      <!-- indexer::continue -->
       <div class="show-mobile">
-      </div><!-- END .show-mobile -->
-    </div><!-- END .nav-wrapper -->
-    <!-- indexer::stop -->
+      </div>
+    </div>
     <nav class="mod_breadcrumb block" aria-label="Breadcrumb">
       <ul>
-        <li class="first"><a href="/" title="Heilpraktikerin Simone Schulz - Frankfurt">Heilpraktikerin Simone Schulz Frankfurt</a></li>
+        <li class="first">
+          <a href="/" title="Heilpraktikerin Simone Schulz - Frankfurt">Heilpraktikerin Simone Schulz Frankfurt</a>
+        </li>
         {breadcrumbs.map((crumb, index) => (
           <li class={index === breadcrumbs.length - 1 ? "active last" : ""} aria-current={index === breadcrumbs.length - 1 ? "page" : undefined}>
             {index === breadcrumbs.length - 1 ? (
@@ -90,6 +84,5 @@ import Navbar from "./Navbar.astro";
         ))}
       </ul>
     </nav>
-    <!-- indexer::continue -->
   </div>
 </header>

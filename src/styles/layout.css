@@ -1357,6 +1357,11 @@ a, a:link, a:visited {
     -webkit-tap-highlight-color: rgba(155, 155, 155, 0)
 }
 
+a:focus-visible {
+    outline: 3px solid #7a1f85;
+    outline-offset: 2px;
+}
+
 .pagination ul li a, .pagination ul li a:link, .pagination ul li a:visited {
     background-color: #e3d8db;
     color: #574844

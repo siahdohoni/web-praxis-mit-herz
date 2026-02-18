@@ -1,3 +1,4 @@
+import {getAdminHref, normalize} from '../utils.js';
 import navigation from "../../settings/navigation.json";
 
 export const PagePreview = window.createClass({
@@ -5,14 +6,6 @@ export const PagePreview = window.createClass({
     const { entry, widgetFor, getAsset } = this.props;
     const slug = entry.getIn(['data', 'slug']) || '';
     const collection = entry.get('collection');
-    
-    // Normalize path similar to MainLayout
-    const normalize = (path) => {
-      if (!path) return '/';
-      let p = path.replace(/\/$/, '') || '/';
-      if (!p.startsWith('/')) p = '/' + p;
-      return p;
-    };
     
     // Construct href based on collection and slug
     let currentHref = '';
@@ -22,22 +15,6 @@ export const PagePreview = window.createClass({
       currentHref = `/${collection}/${slug}`;
     }
     const normalizedCurrentPath = normalize(currentHref);
-
-    // Helper to convert frontend URL to Decap admin URL
-    const getAdminHref = (frontendHref) => {
-      const path = normalize(frontendHref);
-      if (path === '/') return '/admin#/collections/page/entries/index';
-
-      const parts = path.split('/').filter(Boolean);
-      if (parts.length === 1) {
-          // Top level page
-          return `/admin#/collections/page/entries/${parts[0]}`;
-      } else if (parts.length === 2) {
-          // Subfolder collection
-          return `/admin#/collections/${parts[0]}/entries/${parts[1]}`;
-      }
-      return '#';
-    };
 
     const allLinks = navigation.links.flatMap(link => [
       link,

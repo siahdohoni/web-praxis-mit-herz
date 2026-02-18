@@ -1,37 +1,28 @@
 ---
 import settings from "../settings/site-settings.json";
-import { marked } from "marked";
+import {marked} from "marked";
 const footerText = marked.parse(settings.footerText || '');
 ---
 <footer id="footer">
   <div class="inside">
     <!-- indexer::stop -->
     <nav class="mod_navigation nav_meta block" role="off-canvas">
-      <a href="#skipNavigation53"
-         class="invisible">Navigation überspringen</a>
-      <ul class="level_1">
-        <li class="first"><a href="/impressum"
-                             title="Impressum" class="first">Impressum</a></li>
-        <li class="last"><a href="/datenschutz"
-                            title="Datenschutz" class="last">Datenschutz</a></li>
+      <a href="#footercontent" class="invisible">Navigation überspringen</a>
+      <ul class="level_1" style="padding: 5px;">
+        <li class="first">
+          <a href="/impressum" title="Impressum" class="first">Impressum</a>
+        </li>
+        <li class="last">
+          <a href="/datenschutz" title="Datenschutz" class="last">Datenschutz</a>
+        </li>
       </ul>
-      <a id="skipNavigation53" class="invisible">&nbsp;</a>
     </nav>
     <!-- indexer::continue -->
-    <div class="footer-content">
+    <div id="footercontent" class="footer-content">
       <div class="mod_article block" id="article-18">
         <div class="ce_text grid2 block" set:html={footerText}>
         </div>
-        <div class="ce_text grid1 block">
-          <div id="jameda-widget-container1716104"
-               style="position:relative;width:97px;height:145px;margin:15px 25px;background-image:url(https://cdn1.jameda-elements.de/premium/widgets/_images/bw-small-bg.png);background-repeat:no-repeat;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:15px">
-            <a
-              href="https://www.jameda.de/frankfurt-am-main/heilpraktiker/osteopathie/fachgebiet/?utm_content=BWnote&amp;utm_source=Kunden-Homepages&amp;utm_medium=Badges&amp;utm_term=81549343&amp;utm_campaign=Badges"
-              class="jam_link_check"
-              style="display:block; position:absolute; top:100px; left:10px; width:70px; height:20px; background-color:transparent !important;"
-              target="_blank"></a></div>
-        </div>
-        <div class="ce_text grid1 block">
+        <div class="ce_text grid2 block" style="padding: 5px;">
           <p style="text-align: right;">
             <a title={settings.footerImageAlt} href={settings.footerImageHref}>
               <img src={settings.footerImage} alt={settings.footerImageAlt} width={settings.footerImageWidth}/>
