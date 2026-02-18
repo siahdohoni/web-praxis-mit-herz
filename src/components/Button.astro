@@ -1,0 +1,44 @@
+---
+interface Props {
+    text: string
+    href: string
+    title?: string;
+}
+const {text, href, title = ''} = Astro.props as Props;
+---
+<div style="text-align: center">
+  <a
+    href={href}
+    title={title}
+    target="_blank" rel="noopener">{text}</a>
+</div>
+
+<style>
+    a {
+        font-size: 16px;
+        font-weight: bold;
+        font-family: Arial, Helvetica Neue, sans-serif;
+        padding: 10px 20px;
+        border-radius: 100px;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: 0;
+        cursor: pointer;
+        text-decoration: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: #cb53d6;
+        color: #fff;
+    }
+
+    a:hover {
+        filter: brightness(1.1);
+    }
+
+    a:focus-visible {
+        outline: 3px solid #7a1f85;
+        outline-offset: 2px;
+    }
+</style>

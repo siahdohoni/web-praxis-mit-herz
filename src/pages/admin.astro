@@ -14,7 +14,7 @@
 </html>
 
 <script>
-  import {DocToLibButton} from '../cms/components/DocToLibButton.js'
+  import {Button} from '../cms/components/Button.js'
   import {JamedaEmbedding} from '../cms/components/JamedaEmbedding.js'
   import {Card} from '../cms/components/Card.js'
   import {ImageBlock} from '../cms/components/ImageBlock.js'
@@ -28,7 +28,7 @@
         const CMS = window.CMS;
         CMS.registerPreviewStyle('/admin/admin.css');
 
-        CMS.registerEditorComponent(DocToLibButton);
+        CMS.registerEditorComponent(Button);
         CMS.registerEditorComponent(JamedaEmbedding);
         CMS.registerEditorComponent(Card);
         CMS.registerEditorComponent(ImageBlock);

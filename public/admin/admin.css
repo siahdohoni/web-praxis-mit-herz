@@ -1394,6 +1394,11 @@ a, a:link, a:visited {
     -webkit-tap-highlight-color: rgba(155, 155, 155, 0)
 }
 
+a:focus-visible {
+    outline: 3px solid #7a1f85;
+    outline-offset: 2px;
+}
+
 .pagination ul li a, .pagination ul li a:link, .pagination ul li a:visited {
     background-color: #e3d8db;
     color: #574844
@@ -4050,7 +4055,6 @@ body.sidebar #main:after, .ce_text:after, .innerwrapper:after, .mod_breadcrumb:a
         background-image: url(/icons/nav-close.png);
         background-position: 90% 50%;
         background-repeat: no-repeat;
-        background-size: 2rem 2rem;
         position: fixed
     }
 
@@ -4208,39 +4212,30 @@ body.sidebar #main:after, .ce_text:after, .innerwrapper:after, .mod_breadcrumb:a
     }
 }
 
-.doctolib-button {
-    display: inline-block;
-    padding: 6px 12px;
-    margin-bottom: 0;
-    color: #fff;
-    font-family: Arial;
-    font-size: 12px;
-    font-weight: normal;
-    line-height: 1.42857;
-    text-align: center;
-    vertical-align: middle;
-    text-transform: uppercase;
-    min-height: 0;
-    width: 230px;
-    background-image: none;
-    background-color: #3498db;
+.pmh-button, .pmh-button:visited, .pmh-button:active, .pmh-button:link, .pmh-button:hover {
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, Helvetica Neue, sans-serif;
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
     cursor: pointer;
     text-decoration: none;
-    border: 1px solid transparent;
-    border-width: medium medium 2px;
-    border-style: none none solid;
-    border-image: none;
-    border-radius: 5px;
-    border-bottom-color: #2383c4;
-    -moz-border-top-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-user-select: none
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #cb53d6;
+    color: #fff;
 }
 
-.doctolib-button:hover {
-    background-color: #077ac7;
-    color: #fff;
-    text-decoration: none
+.pmh-button:hover {
+    filter: brightness(1.1);
+}
+
+.pmh-button:focus-visible {
+    outline: 3px solid #7a1f85;
+    outline-offset: 2px;
 }

@@ -69,6 +69,8 @@ export const PagePreview = window.createClass({
 
     return h('div', { lang: 'de' },
       h('div', { id: 'top', className: 'mac chrome blink ch143' },
+        h('input', { type: 'checkbox', id: 'menu', className: 'mobile-check' },),
+        h('label', { for: 'menu', className: 'button-nav-mobile' },),
         h('div', { className: 'outer-wrapper' },
           h('div', { className: 'inner-wrapper' },
             // Header
