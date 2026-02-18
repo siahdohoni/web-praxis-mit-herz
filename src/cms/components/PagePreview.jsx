@@ -23,7 +23,7 @@ export const PagePreview = window.createClass({
 
     const currentLink = allLinks.find(link => normalize(link.href) === normalizedCurrentPath);
     const pageTitle = currentLink?.title || entry.getIn(['data', 'title']) || "Praxis mit Herz";
-    const headerImage = currentLink?.header_img || '/images/Header_Startseite.jpg';
+    const headerImage = currentLink?.header || '/src/assets/images/Header_Startseite.jpg';
 
     // Breadcrumbs
     let breadcrumbs = [];
@@ -57,7 +57,7 @@ export const PagePreview = window.createClass({
                   h('div', { className: 'logo' },
                     h('div', {},
                       h('a', { href: getAdminHref('/'), title: 'Startseite' },
-                        h('img', { src: '/images/logo.png', alt: 'Logo Heilpraktikerin Simone Schulz' })
+                        h('img', { src: '/src/assets/images/logo.png', alt: 'Logo Heilpraktikerin Simone Schulz' })
                       )
                     )
                   )
@@ -135,7 +135,7 @@ export const PagePreview = window.createClass({
                   h('div', { className: 'ce_text grid1 block' },
                     h('p', { style: { textAlign: 'right' } },
                       h('a', { href: getAdminHref('/über-mich') },
-                        h('img', { src: '/images/7dd71608-63bd-4a32-a2c6-fb56540f7826.jpg', alt: 'Heilpraktikerin Simone Schulz, Frankfurt', width: '150' })
+                        h('img', { src: '/src/assets/images/7dd71608-63bd-4a32-a2c6-fb56540f7826.jpg', alt: 'Heilpraktikerin Simone Schulz, Frankfurt', width: '150' })
                       )
                     )
                   )

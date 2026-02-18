@@ -4,10 +4,7 @@ import settings from '../settings/site-settings.json'
 const currentPath = Astro.url.pathname;
 
 // Find the current navigation item to get the header image
-const allLinks = navigation.links.flatMap(link => [
-  link,
-  ...(link.sublinks || [])
-]);
+const allLinks = navigation.links.flatMap(l => [l, ...(l.sublinks)]);
 
 const normalize = (path: string) => decodeURIComponent(path).replace(/\/$/, '') || '/';
 const normalizedCurrentPath = normalize(currentPath);
@@ -16,7 +13,7 @@ const currentLink = allLinks.find(link => {
   return normalize(link.href) === normalizedCurrentPath
 });
 
-const headerImage = currentLink?.header_img || '/images/header0.jpeg';
+const headerImage = currentLink?.header || '/src/assets/images/Header_Startseite.jpg';
 
 // Breadcrumb logic
 
