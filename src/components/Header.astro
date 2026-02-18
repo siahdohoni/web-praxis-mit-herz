@@ -1,5 +1,6 @@
 ---
 import navigation from '../settings/navigation.json'
+import settings from '../settings/site-settings.json'
 const currentPath = Astro.url.pathname;
 
 // Find the current navigation item to get the header image
@@ -44,9 +45,7 @@ import Navbar from "./Navbar.astro";
       <div class="logo">
         <div>
           <a href="/" title="Startseite">
-            <img
-              src="/images/logo.png"
-              title="Logo Heilpraktikerin Simone Schulz" alt="Logo Heilpraktikerin Simone Schulz"/>
+            <img src={settings.logo} title="Logo Heilpraktikerin Simone Schulz" alt="Logo Heilpraktikerin Simone Schulz"/>
           </a>
         </div>
       </div>
