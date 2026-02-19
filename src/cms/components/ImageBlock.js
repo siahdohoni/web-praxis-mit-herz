@@ -6,7 +6,7 @@ export const ImageBlock = {
   label: 'ImageBlock',
   fields: [
     {label: 'Image', name: 'image', widget: 'image'},
-    {label: 'Alt Text', name: 'alt', widget: 'string', required: false},
+    {label: 'Alt Text', name: 'alt', widget: 'string', required: true},
     {
       label: 'Position',
       name: 'position',
@@ -27,7 +27,7 @@ export const ImageBlock = {
   },
   toBlock: function (obj) {
     const {body, ...rest} = obj;
-    return `<ImageBlock ${toAttrString(rest, ['image', 'href', 'alt', 'position', 'width'])}>
+    return `<ImageBlock ${toAttrString(rest, ['image', 'alt', 'position', 'width'])}>
 ${body.trim() || ''}
 </ImageBlock>`;
   },
@@ -43,7 +43,7 @@ ${body.trim() || ''}
     return `
       <div class="ce_text block">
         <figure class="image_container ${floatClass}">
-          <img src="${image}" alt="${obj.alt || ''}" style="width: ${width}px;" />
+          <img src="${image}" alt="${obj.alt || ''}" title="${obj.alt || ''}" style="width: ${width}px;" />
         </figure>
         <div>${bodyHtml}</div>
       </div>
