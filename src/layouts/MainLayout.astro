@@ -5,17 +5,16 @@ import Header from "../components/Header.astro";
 import navigation from "../settings/navigation.json";
 import settings from "../settings/site-settings.json";
 
-const currentPath = Astro.url.pathname;
-const normalize = (path: string) => decodeURIComponent(path).replace(/\/$/, '') || '/';
-const normalizedCurrentPath = normalize(currentPath);
+const currentPath = decodeURIComponent(Astro.url.pathname).replace(/\/$/, '') || '/';
 
-const allLinks = navigation.links.flatMap(link => [
-  link,
-  ...(link.sublinks || [])
-]);
-
-const currentLink = allLinks.find(link => normalize(link.href) === normalizedCurrentPath);
-const pageTitle = currentLink?.title || Astro.props.title || "Praxis mit Herz";
+// Find the current navigation item to get the header image
+const currentLink = navigation.links
+    .flatMap(l => [l, ...(l.sublinks)])
+    .find(l => {
+        return l.href === currentPath || l.href === '/' && currentPath === '/index';
+    });
+if (!currentLink)
+    throw new Error(`No navigation item found for path "${currentPath}"`);
 ---
 <html lang="de">
   <head>
@@ -30,7 +29,7 @@ const pageTitle = currentLink?.title || Astro.props.title || "Praxis mit Herz";
     <meta name="keywords" content={settings.keywords}>
     <meta name="viewport" content="width=device-width"/>
     <meta name="generator" content={Astro.generator}/>
-    <title>{pageTitle + settings.siteTitleSuffix}</title>
+    <title>{currentLink.title + settings.siteTitleSuffix}</title>
   </head>
   <body id="top" class="mac chrome blink ch143">
     <input type="checkbox" id="menu" class="mobile-check">
