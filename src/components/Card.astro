@@ -1,18 +1,26 @@
 ---
+import type {ImageMetadata} from 'astro';
+import {Image} from 'astro:assets';
+
 interface Props {
-    title?: string;
     image: string;
+    alt: string;
     href?: string;
-    alt?: string;
 }
 
-const {title, image, href = '', alt = ''} = Astro.props as Props;
+const {image, alt, href = ''} = Astro.props as Props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif,webp}')
+if (!images[image])
+    throw new Error(`"${image}" does not exist in: "src/assets/images*.{jpeg,jpg,png,gif,webp}"`);
 ---
 <div class="ce_text grid1 block">
   <figure class="image_container float_above">
-    <a href={href} title={title}>
-      <img src={image} alt={alt} title={alt} width="300"/>
-    </a>
+      { href.trim() !== '' ? (<a href={href} title={alt}>
+          <Image src={images[image]()} alt={alt} title={alt} width={300}/>
+        </a>)
+          : (
+          <Image src={images[image]()} alt={alt} title={alt} width={300}/>)
+      }
   </figure>
-    <slot />
+  <slot/>
 </div>

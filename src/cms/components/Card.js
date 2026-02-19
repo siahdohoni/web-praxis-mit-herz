@@ -6,7 +6,7 @@ export const Card = {
   label: 'Card',
   fields: [
     {label: 'Image', name: 'image', widget: 'image'},
-    {label: 'Alt Text', name: 'alt', widget: 'string', required: false},
+    {label: 'Alt Text', name: 'alt', widget: 'string', required: true},
     {label: 'Link (URL)', name: 'href', widget: 'string', required: false},
     {label: 'Body', name: 'body', widget: 'markdown'},
   ],
@@ -20,7 +20,7 @@ export const Card = {
   },
   toBlock: function (obj) {
     const {body, ...rest} = obj;
-    return `<Card ${toAttrString(rest, ['image', 'href', 'alt'])}>
+    return `<Card ${toAttrString(rest, ['image', 'alt', 'href'])}>
 ${body.trim() || ''}
 </Card>`;
   },
@@ -30,12 +30,15 @@ ${body.trim() || ''}
     // Convert markdown to HTML
     const bodyHtml = marked.parse(obj.body || '');
 
+    const imgTag = `<img src="${image}" alt="${obj.alt || ''}" title="${obj.alt || ''}" style="width: 300px;" />`;
+    const imageContent = obj.href && obj.href.trim() !== ''
+      ? `<a href="${obj.href}" title="${obj.alt || ''}">${imgTag}</a>`
+      : imgTag;
+
     return `
 <div class="ce_text grid1 block">
   <figure class="image_container float_above">
-    <a href="${obj.href || ''}" title="${obj.alt || ''}">
-      <img src="${image}" alt="${obj.alt || ''}" title="${obj.alt || ''}" style="width: 300px;" />
-    </a>
+    ${imageContent}
   </figure>
     ${bodyHtml}
 </div>`;
