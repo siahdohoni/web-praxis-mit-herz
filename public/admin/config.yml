@@ -3,8 +3,8 @@ backend:
   repo: siahdohoni/web-praxis-mit-herz
   branch: main
 publish_mode: editorial_workflow
-media_folder: "src/assets/images"
-public_folder: "/src/assets/images"
+media_folder: "public/admin/uploads"
+public_folder: "/admin/uploads"
 collections:
   - name: page
     label: Hauptseiten
