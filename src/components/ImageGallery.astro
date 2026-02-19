@@ -1,26 +1,41 @@
 ---
-interface ImageItem {
+import type {ImageMetadata} from "astro";
+import {Image} from "astro:assets";
+
+interface ImageInput {
     src: string;
-    alt: string;
     title: string;
 }
 
 interface Props {
-    images: ImageItem[];
+    images: string;
 }
 
-const {images: imagesInput = []} = Astro.props as Props;
+const {images: imagesInput} = Astro.props as Props;
+const images = JSON.parse(imagesInput) as ImageInput[];
+const imageAssets = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif,webp}')
 
-const images = typeof imagesInput === 'string' ? JSON.parse(imagesInput) : imagesInput;
+const processedImages = await Promise.all(images.map(async (img: ImageInput) => {
+    if (!imageAssets[img.src]) {
+        throw new Error(`"${img.src}" does not exist in: "src/assets/images*.{jpeg,jpg,png,gif,webp}"`);
+    }
+    const asset = await imageAssets[img.src]();
+    return {
+        ...img,
+        asset,
+        url: asset.default.src
+    };
+}));
 ---
 <div class="ce_gallery" style="display: inline-block;">
   <ul class="cols_3">
-      {images.map((img, index) => (
+      {processedImages.map((img, index) => (
         <li
           class={`row_0 row_first row_last even col_${index} ${index === 0 ? 'col_first' : ''} ${index === images.length - 1 ? 'col_last' : ''}`}>
           <figure class="image_container">
-            <a href={img.src} title={img.title} data-lightbox="lb271" class="cboxElement">
-              <img src={img.src} alt={img.alt} style="width: 250px; height: 250px; object-fit: cover; display: block;"/>
+            <a href={img.url} title={img.title} data-lightbox="lb271" class="cboxElement">
+              <Image src={img.asset.default} alt={img.title} width={250}
+                     style="height: 250px; object-fit: cover; display: block;"/>
             </a>
           </figure>
         </li>
@@ -32,17 +47,18 @@ const images = typeof imagesInput === 'string' ? JSON.parse(imagesInput) : image
 <script src="/scripts/colorbox.min.js" is:inline></script>
 
 <script is:inline>
-  function initColorbox() {
-    if (window.jQuery && jQuery().colorbox) {
-      jQuery('a.cboxElement').colorbox({
-        rel: 'lb271',
-        maxWidth: '95%',
-        maxHeight: '95%',
-        photo: true
-      });
-    } else {
-      setTimeout(initColorbox, 50);
+    function initColorbox() {
+        if (window.jQuery && jQuery().colorbox) {
+            jQuery('a.cboxElement').colorbox({
+                rel: 'lb271',
+                maxWidth: '95%',
+                maxHeight: '95%',
+                photo: true
+            });
+        } else {
+            setTimeout(initColorbox, 50);
+        }
     }
-  }
-  initColorbox();
+
+    initColorbox();
 </script>
