@@ -40,7 +40,7 @@ const normalizedCurrentPath = normalize(currentPath);
                 <li class="submenu">
                     {isActive ?
                         (<span class={isActive ? 'active' : ''}>{l.label}</span>)
-                        : (<a href={l.href} title={l.title} class={isSubActive ? 'trail' : ''}>{l.label}</a>)
+                        : (<a href={l.href} title={l.title} class={isSubActive ? 'trail' : ''} target={l.href.startsWith('http') ? '_blank' : undefined} rel={l.href.startsWith('http') ? 'noopener noreferrer' : undefined}>{l.label}</a>)
                     }
                     {Array.isArray(l.sublinks) && l.sublinks.length > 0 ? (
                       <ul class="level_2">
@@ -52,7 +52,7 @@ const normalizedCurrentPath = normalize(currentPath);
                                 <li>
                                     {isSubActive ?
                                         (<span class={isSubActive ? 'active' : ''}>{s.label}</span>)
-                                        : (<a href={s.href} title={s.title}>{s.label}</a>)
+                                        : (<a href={s.href} title={s.title} target={s.href.startsWith('http') ? '_blank' : undefined} rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}>{s.label}</a>)
                                     }
                                 </li>
                               );
