@@ -1,13 +1,19 @@
 ---
+import type {ImageMetadata} from 'astro';
+import {Image} from 'astro:assets';
+
 interface Props {
     image: string;
-    alt?: string;
+    alt: string;
     position: 'left' | 'center' | 'right';
     width?: number;
     frame?: string;
 }
 
-const {image, alt = '', position = 'left', width = 300, frame = "false"} = Astro.props as Props;
+const {image, alt, position = 'left', width = 300, frame = "false"} = Astro.props as Props;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif,webp}')
+if (!images[image])
+    throw new Error(`"${image}" does not exist in: "src/assets/images*.{jpeg,jpg,png,gif,webp}"`);
 
 const getAlignmentStyle = (pos: string) => {
     switch (pos) {
@@ -25,12 +31,12 @@ const getAlignmentStyle = (pos: string) => {
 {frame === "true" ? (
 <div style={getAlignmentStyle(position)}>
   <figure class="image_container" style={getAlignmentStyle(position)}>
-    <img src={image} alt={alt} title={alt} width={width}/>
+    <Image src={images[image]()} alt={alt} title={alt} width={width}/>
   </figure>
 </div>
     ) : (
 <p style={getAlignmentStyle(position)}>
-  <img src={image} alt={alt} title={alt} width={width}/>
+  <Image src={images[image]()} alt={alt} title={alt} width={width}/>
 </p>
     )}
 
