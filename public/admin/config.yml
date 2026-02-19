@@ -3,6 +3,8 @@ backend:
   repo: siahdohoni/web-praxis-mit-herz
   branch: main
 publish_mode: editorial_workflow
+site_url: https://praxismitherz.de
+display_url: https://praxismitherz.de
 media_folder: "public/admin/uploads"
 public_folder: "/admin/uploads"
 collections:
