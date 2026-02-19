@@ -8,7 +8,7 @@ display_url: https://praxismitherz.de
 media_folder: "public/admin/uploads"
 public_folder: "/admin/uploads"
 collections:
-  - name: page
+  - name: mainpages
     label: Hauptseiten
     label_singular: Hauptseite
     description: "Hauptseiten der Website (Keine \"Unterseiten\")"

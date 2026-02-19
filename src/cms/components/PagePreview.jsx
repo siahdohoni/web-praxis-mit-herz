@@ -11,7 +11,7 @@ export const PagePreview = window.createClass({
 
     // Construct href based on collection and slug
     let currentHref = '';
-    if (collection === 'page') {
+    if (collection === 'mainpages') {
       currentHref = slug === 'index' ? '/' : (slug.startsWith('/') ? slug : '/' + slug);
     } else {
       currentHref = `/${collection}/${slug}`;
