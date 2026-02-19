@@ -1,5 +1,7 @@
 import {getAdminHref, normalize} from '../utils.js';
 import navigation from "../../settings/navigation.json";
+import settings from "../../settings/site-settings.json";
+import { marked } from "marked";
 
 export const PagePreview = window.createClass({
   render: function () {
@@ -55,7 +57,7 @@ export const PagePreview = window.createClass({
                     h('div', {},
                       h('a', {href: getAdminHref('/'), title: 'Startseite'},
                         h('img', {
-                          src: `/admin/uploads/logo.png`,
+                          src: getAsset(settings.logo),
                           alt: 'Logo Heilpraktikerin Simone Schulz'
                         })
                       )
@@ -116,7 +118,7 @@ export const PagePreview = window.createClass({
             // Main Content
             h('div', {id: 'wrapper'},
               h('div', {id: 'container'},
-                h('div', {id: 'main'},
+                h('main', {id: 'main'},
                   widgetFor('body')
                 )
               )
@@ -133,19 +135,17 @@ export const PagePreview = window.createClass({
               ),
               h('div', {className: 'footer-content'},
                 h('div', {className: 'mod_article block'},
-                  h('div', {className: 'ce_text grid2 block'},
-                    h('h4', {}, 'Heilpraktikerin Simone Schulz'),
-                    h('p', {}, 'Seckbacher Landstr. 74', h('br'), 'Erdgeschoss links', h('br'), '60389 Frankfurt'),
-                    h('p', {}, 'Nußallee 7', h('br'), 'Gebäude C / 2. OG', h('br'), '63450 Hanau'),
-                    h('p', {}, 'Telefon: ', h('a', {href: 'tel:+491601536183'}, '01601536183'), h('br'), 'Email: ', h('a', {href: 'mailto:info@praxismitherz.net'}, 'info@praxismitherz.net'))
-                  ),
+                  h('div', {
+                    className: 'ce_text grid2 block',
+                    dangerouslySetInnerHTML: { __html: marked.parse(settings.footerText || '') }
+                  }),
                   h('div', {className: 'ce_text grid2 block'},
                     h('p', {style: {textAlign: 'right'}},
-                      h('a', {href: getAdminHref('/über-mich')},
+                      h('a', {href: getAdminHref(settings.footerImageHref)},
                         h('img', {
-                          src: `/admin/uploads/7dd71608-63bd-4a32-a2c6-fb56540f7826.jpg`,
-                          alt: 'Heilpraktikerin Simone Schulz, Frankfurt',
-                          width: '150'
+                          src: getAsset(settings.footerImage),
+                          alt: settings.footerImageAlt,
+                          width: settings.footerImageWidth
                         })
                       )
                     )
