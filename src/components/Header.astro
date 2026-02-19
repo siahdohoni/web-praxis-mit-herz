@@ -1,40 +1,41 @@
 ---
+import { Image } from 'astro:assets';
+import type {ImageMetadata} from "astro";
+import Navbar from "./Navbar.astro";
 import navigation from '../settings/navigation.json'
 import settings from '../settings/site-settings.json'
+
 const currentPath = Astro.url.pathname;
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif,webp}')
+if (!images[settings.logo])
+    throw new Error(`"${settings.logo}" does not exist in: "src/assets/images*.{jpeg,jpg,png,gif,webp}"`);
+const logoAlt = 'Logo Heilpraktikerin Simone Schulz';
 
 // Find the current navigation item to get the header image
-const allLinks = navigation.links.flatMap(l => [l, ...(l.sublinks)]);
-
-const normalize = (path: string) => decodeURIComponent(path).replace(/\/$/, '') || '/';
-const normalizedCurrentPath = normalize(currentPath);
-const currentLink = allLinks.find(link => {
-  // Normalize paths for comparison (remove trailing slashes)
-  return normalize(link.href) === normalizedCurrentPath
-});
+const currentLink = navigation.links
+    .flatMap(l => [l, ...(l.sublinks)])
+    .find(l => {
+        return l.href === currentPath
+    });
 
 const headerImage = currentLink?.header || '/src/assets/images/Header_Startseite.jpg';
 
 // Breadcrumb logic
-
 let breadcrumbs = [];
-  for (const link of navigation.links) {
-    if (normalize(link.href) === normalizedCurrentPath) {
-      breadcrumbs.push({ label: link.label, href: link.href });
-      break;
+for (const link of navigation.links) {
+    if (link.href === currentPath) {
+        breadcrumbs.push({label: link.label, href: link.href});
+        break;
     }
     if (link.sublinks) {
-      const sublink = link.sublinks.find(s => normalize(s.href) === normalizedCurrentPath);
-      if (sublink) {
-        breadcrumbs.push({ label: link.label, href: link.href });
-        breadcrumbs.push({ label: sublink.label, href: sublink.href });
-        break;
-      }
+        const sublink = link.sublinks.find(s => s.href === currentPath);
+        if (sublink) {
+            breadcrumbs.push({label: link.label, href: link.href});
+            breadcrumbs.push({label: sublink.label, href: sublink.href});
+            break;
+        }
     }
-  }
-
-import Navbar from "./Navbar.astro";
-
+}
 ---
 <header id="header">
   <div class="inside">
@@ -42,7 +43,7 @@ import Navbar from "./Navbar.astro";
       <div class="logo">
         <div>
           <a href="/" title="Startseite">
-            <img src={settings.logo} title="Logo Heilpraktikerin Simone Schulz" alt="Logo Heilpraktikerin Simone Schulz"/>
+            <Image src={images[settings.logo]()} alt={logoAlt} title={logoAlt} height={120} quality="high" densities={[1.5, 2]}/>
           </a>
         </div>
       </div>
