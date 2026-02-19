@@ -27,7 +27,7 @@ const currentPath = Astro.url.pathname;
 const normalize = (path: string) => decodeURIComponent(path).replace(/\/$/, '') || '/';
 const normalizedCurrentPath = normalize(currentPath);
 ---
-<nav class="mod_navigation nav_main block" role="off-canvas">
+<nav class="mod_navigation nav_main block" role="navigation">
   <a href="#main" class="invisible">Navigation überspringen</a>
   <ul class="level_1">
       {
