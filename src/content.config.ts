@@ -9,6 +9,7 @@ const page = defineCollection({
     }),
     schema: () =>
         z.object({
+            name: z.string(),
             slug: z.string()
         }),
 });
