@@ -20,7 +20,7 @@ export const Button = {
   },
   toPreview: function (obj) {
     return `<div style="text-align: center">
-  <a href="${obj.url}" target="_blank" rel="noopener" class="pmh-button">Termin online buchen</a>
+  <a href="${obj.url}" title="${obj.title}" target="_blank" rel="noopener" class="pmh-button">Termin online buchen</a>
 </div>`;
   }
 };

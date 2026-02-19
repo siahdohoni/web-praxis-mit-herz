@@ -35,7 +35,7 @@ const processedImages = await Promise.all(images.map(async (img: ImageInput) => 
           class={`row_0 row_first row_last even col_${index} ${index === 0 ? 'col_first' : ''} ${index === images.length - 1 ? 'col_last' : ''}`}>
           <figure class="image_container">
             <a href={img.url} title={img.title} data-lightbox="lb271" class="cboxElement">
-              <Image src={img.asset.default} alt={img.title} width={250}
+              <Image src={img.asset.default} alt={img.title} width={250} loading="lazy"
                      style="height: 250px; object-fit: cover; display: block;"/>
             </a>
           </figure>

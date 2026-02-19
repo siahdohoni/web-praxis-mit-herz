@@ -32,12 +32,12 @@ const getAlignmentStyle = (pos: string) => {
 {frame === "true" ? (
 <div style={getAlignmentStyle(position)}>
   <figure class="image_container" style={getAlignmentStyle(position)}>
-    <Image src={images[imagePath]()} alt={alt} title={alt} width={width}/>
+    <Image src={images[imagePath]()} alt={alt} title={alt} width={width} loading="lazy" />
   </figure>
 </div>
     ) : (
 <p style={getAlignmentStyle(position)}>
-  <Image src={images[imagePath]()} alt={alt} title={alt} width={width}/>
+  <Image src={images[imagePath]()} alt={alt} title={alt} width={width} loading="lazy" />
 </p>
     )}
 

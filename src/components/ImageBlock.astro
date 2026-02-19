@@ -17,7 +17,7 @@ if (!images[imagePath])
 ---
 <div class="ce_text block">
   <figure class={`image_container ${position === 'right' ? 'float_right' : 'float_left'}`}>
-    <Image src={images[imagePath]()} alt={alt} title={alt} width={width}/>
+    <Image src={images[imagePath]()} alt={alt} title={alt} width={width} loading="lazy" />
   </figure>
   <slot/>
 </div>
