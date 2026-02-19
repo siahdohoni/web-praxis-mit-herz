@@ -49,7 +49,7 @@ for (const link of navigation.links) {
       <div class="logo">
         <div>
           <a href="/" title="Startseite">
-            <Image src={images[logoPath]()} alt={logoAlt} title={logoAlt} height={120} quality="high"
+            <Image src={images[logoPath]()} alt={logoAlt} title={logoAlt} height={120} quality={80}
                    densities={[1.5, 2]}/>
           </a>
         </div>
@@ -59,8 +59,7 @@ for (const link of navigation.links) {
     </div>
     <div class="mod_article headerimage block" id="article-124">
       <div class="ce_gallery block">
-        <Image src={images[headerPath]()} alt={headerAlt} sizes="100vw" loading="eager" fetchpriority="high"
-               style="width: 100%; height: 200px; object-fit: cover; display: block;"/>
+        <Image class="header-image" src={images[headerPath]()} alt={headerAlt} sizes="100vw" loading="eager" fetchpriority="high"/>
       </div>
     </div>
     <div class="placeholder"></div>
@@ -88,3 +87,18 @@ for (const link of navigation.links) {
     </nav>
   </div>
 </header>
+
+<style>
+    .header-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+    }
+
+    @media (min-width: 1px) and (max-width: 1023px) {
+        .header-image {
+            height: 200px;
+        }
+    }
+</style>
