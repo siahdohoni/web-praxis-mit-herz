@@ -6,9 +6,10 @@ import navigation from '../settings/navigation.json'
 import settings from '../settings/site-settings.json'
 
 const currentPath = decodeURIComponent(Astro.url.pathname).replace(/\/$/, '') || '/';
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif,webp}')
-if (!images[settings.logo])
-    throw new Error(`"${settings.logo}" does not exist in: "src/assets/images*.{jpeg,jpg,png,gif,webp}"`);
+const images = import.meta.glob<{ default: ImageMetadata }>('/public/admin/uploads/*.{jpeg,jpg,png,gif,webp}')
+const logoPath = "/public" + settings.logo
+if (!images[logoPath])
+    throw new Error(`"${logoPath}" does not exist in: "/public/admin/uploads/*.{jpeg,jpg,png,gif,webp}"`);
 const logoAlt = 'Logo Heilpraktikerin Simone Schulz';
 
 // Find the current navigation item to get the header image
@@ -20,9 +21,10 @@ const currentLink = navigation.links
 if (!currentLink)
     throw new Error(`No navigation item found for path "${currentPath}"`);
 
-if (!images[currentLink.header])
-    throw new Error(`"${currentLink.header}" does not exist in: "src/assets/images*.{jpeg,jpg,png,gif,webp}"`);
-const headerImage = await getImage({src: images[currentLink.header]()});
+const headerPath = "/public" + currentLink.header
+if (!images[headerPath])
+    throw new Error(`"${headerPath}" does not exist in: "/public/admin/uploads/*.{jpeg,jpg,png,gif,webp}"`);
+const headerImage = await getImage({src: images[headerPath]()});
 
 // Breadcrumb logic
 let breadcrumbs = [];
@@ -47,7 +49,7 @@ for (const link of navigation.links) {
       <div class="logo">
         <div>
           <a href="/" title="Startseite">
-            <Image src={images[settings.logo]()} alt={logoAlt} title={logoAlt} height={120} quality="high"
+            <Image src={images[logoPath]()} alt={logoAlt} title={logoAlt} height={120} quality="high"
                    densities={[1.5, 2]}/>
           </a>
         </div>

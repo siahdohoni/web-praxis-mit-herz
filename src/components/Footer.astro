@@ -5,9 +5,10 @@ import settings from "../settings/site-settings.json";
 import {marked} from "marked";
 const footerText = marked.parse(settings.footerText || '');
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif,webp}')
-if (!images[settings.footerImage])
-    throw new Error(`"${settings.footerImage}" does not exist in: "src/assets/images*.{jpeg,jpg,png,gif,webp}"`);
+const images = import.meta.glob<{ default: ImageMetadata }>('/public/admin/uploads/*.{jpeg,jpg,png,gif,webp}')
+const footerImagePath = "/public" + settings.footerImage;
+if (!images[footerImagePath])
+    throw new Error(`"${footerImagePath}" does not exist in: "/public/admin/uploads/*.{jpeg,jpg,png,gif,webp}"`);
 ---
 <footer id="footer">
   <div class="inside">
@@ -31,7 +32,7 @@ if (!images[settings.footerImage])
         <div class="ce_text grid2 block" style="padding: 5px;">
           <p style="text-align: right;">
             <a title={settings.footerImageAlt} href={settings.footerImageHref}>
-              <Image src={images[settings.footerImage]()} alt={settings.footerImageAlt} width={settings.footerImageWidth}/>
+              <Image src={images[footerImagePath]()} alt={settings.footerImageAlt} width={settings.footerImageWidth}/>
             </a>
           </p>
         </div>

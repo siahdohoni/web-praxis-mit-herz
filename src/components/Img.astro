@@ -11,9 +11,10 @@ interface Props {
 }
 
 const {image, alt, position = 'left', width = 300, frame = "false"} = Astro.props as Props;
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif,webp}')
-if (!images[image])
-    throw new Error(`"${image}" does not exist in: "src/assets/images*.{jpeg,jpg,png,gif,webp}"`);
+const imagePath = "/public" + image;
+const images = import.meta.glob<{ default: ImageMetadata }>('/public/admin/uploads/*.{jpeg,jpg,png,gif,webp}')
+if (!images[imagePath])
+    throw new Error(`"${imagePath}" does not exist in: "src/assets/images*.{jpeg,jpg,png,gif,webp}"`);
 
 const getAlignmentStyle = (pos: string) => {
     switch (pos) {
@@ -31,12 +32,12 @@ const getAlignmentStyle = (pos: string) => {
 {frame === "true" ? (
 <div style={getAlignmentStyle(position)}>
   <figure class="image_container" style={getAlignmentStyle(position)}>
-    <Image src={images[image]()} alt={alt} title={alt} width={width}/>
+    <Image src={images[imagePath]()} alt={alt} title={alt} width={width}/>
   </figure>
 </div>
     ) : (
 <p style={getAlignmentStyle(position)}>
-  <Image src={images[image]()} alt={alt} title={alt} width={width}/>
+  <Image src={images[imagePath]()} alt={alt} title={alt} width={width}/>
 </p>
     )}
 

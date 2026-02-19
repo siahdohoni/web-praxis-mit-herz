@@ -10,13 +10,14 @@ interface Props {
 }
 
 const {image, alt, position = 'right', width = 300} = Astro.props as Props;
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif,webp}')
-if (!images[image])
-    throw new Error(`"${image}" does not exist in: "src/assets/images*.{jpeg,jpg,png,gif,webp}"`);
+const imagePath = "/public" + image;
+const images = import.meta.glob<{ default: ImageMetadata }>('/public/admin/uploads/*.{jpeg,jpg,png,gif,webp}')
+if (!images[imagePath])
+    throw new Error(`"${imagePath}" does not exist in: "/public/admin/uploads/*.{jpeg,jpg,png,gif,webp}"`);
 ---
 <div class="ce_text block">
   <figure class={`image_container ${position === 'right' ? 'float_right' : 'float_left'}`}>
-    <Image src={images[image]()} alt={alt} title={alt} width={width}/>
+    <Image src={images[imagePath]()} alt={alt} title={alt} width={width}/>
   </figure>
   <slot/>
 </div>

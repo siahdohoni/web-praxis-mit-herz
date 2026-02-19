@@ -13,13 +13,14 @@ interface Props {
 
 const {images: imagesInput} = Astro.props as Props;
 const images = JSON.parse(imagesInput) as ImageInput[];
-const imageAssets = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif,webp}')
+const imageAssets = import.meta.glob<{ default: ImageMetadata }>('/public/admin/uploads/*.{jpeg,jpg,png,gif,webp}')
 
 const processedImages = await Promise.all(images.map(async (img: ImageInput) => {
-    if (!imageAssets[img.src]) {
-        throw new Error(`"${img.src}" does not exist in: "src/assets/images*.{jpeg,jpg,png,gif,webp}"`);
+    const imgPath = "/public" + img.src;
+    if (!imageAssets[imgPath]) {
+        throw new Error(`"${imgPath}" does not exist in: "/public/admin/uploads/*.{jpeg,jpg,png,gif,webp}"`);
     }
-    const asset = await imageAssets[img.src]();
+    const asset = await imageAssets[imgPath]();
     return {
         ...img,
         asset,
