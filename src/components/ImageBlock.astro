@@ -9,7 +9,7 @@ interface Props {
     width?: number;
 }
 
-const {image, alt, position = 'right', width = 300} = Astro.props as Props;
+const {image, alt = '', position = 'right', width = 300} = Astro.props as Props;
 const imagePath = "/public" + image;
 const images = import.meta.glob<{ default: ImageMetadata }>('/public/admin/uploads/*.{jpeg,jpg,png,gif,webp}')
 if (!images[imagePath])
@@ -17,7 +17,7 @@ if (!images[imagePath])
 ---
 <div class="ce_text block">
   <figure class={`image_container ${position === 'right' ? 'float_right' : 'float_left'}`}>
-    <Image src={images[imagePath]()} alt={alt} title={alt} width={width} loading="lazy" />
+    <Image src={images[imagePath]()} alt={alt} title={alt} width={width} loading="lazy"/>
   </figure>
   <slot/>
 </div>

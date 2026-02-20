@@ -10,7 +10,7 @@ interface Props {
     frame?: string;
 }
 
-const {image, alt, position = 'left', width = 300, frame = "false"} = Astro.props as Props;
+const {image, alt = '', position = 'left', width = 300, frame = "false"} = Astro.props as Props;
 const imagePath = "/public" + image;
 const images = import.meta.glob<{ default: ImageMetadata }>('/public/admin/uploads/*.{jpeg,jpg,png,gif,webp}')
 if (!images[imagePath])
@@ -32,12 +32,12 @@ const getAlignmentStyle = (pos: string) => {
 {frame === "true" ? (
 <div style={getAlignmentStyle(position)}>
   <figure class="image_container" style={getAlignmentStyle(position)}>
-    <Image src={images[imagePath]()} alt={alt} title={alt} width={width} loading="lazy" />
+    <Image src={images[imagePath]()} alt={alt} title={alt} width={width} loading="lazy"/>
   </figure>
 </div>
     ) : (
 <p style={getAlignmentStyle(position)}>
-  <Image src={images[imagePath]()} alt={alt} title={alt} width={width} loading="lazy" />
+  <Image src={images[imagePath]()} alt={alt} title={alt} width={width} loading="lazy"/>
 </p>
     )}
 

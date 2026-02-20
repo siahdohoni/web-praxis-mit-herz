@@ -49,7 +49,7 @@ for (const link of navigation.links) {
       <div class="logo">
         <div>
           <a href="/" title="Startseite">
-            <Image src={images[logoPath]()} alt={logoAlt} title={logoAlt} height={120} quality={80}
+            <Image src={images[logoPath]()} alt={logoAlt || ''} title={logoAlt} height={120} quality={80}
                    densities={[1.5, 2]}/>
           </a>
         </div>
@@ -59,7 +59,7 @@ for (const link of navigation.links) {
     </div>
     <div class="mod_article headerimage block" id="article-124">
       <div class="ce_gallery block">
-        <Image class="header-image" src={images[headerPath]()} alt={headerAlt} sizes="100vw" loading="eager" fetchpriority="high"/>
+        <Image class="header-image" src={images[headerPath]()} alt={headerAlt || ''} sizes="100vw" loading="eager" fetchpriority="high"/>
       </div>
     </div>
     <div class="placeholder"></div>

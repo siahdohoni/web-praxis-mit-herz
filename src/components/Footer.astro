@@ -30,7 +30,7 @@ if (!images[footerImagePath])
         <div class="ce_text grid2 block" style="padding: 5px;">
           <p style="text-align: right;">
             <a title={settings.footerImageAlt} href={settings.footerImageHref}>
-              <Image src={images[footerImagePath]()} alt={settings.footerImageAlt} width={settings.footerImageWidth} loading="lazy" />
+              <Image src={images[footerImagePath]()} alt={settings.footerImageAlt || ''} width={settings.footerImageWidth} loading="lazy" />
             </a>
           </p>
         </div>

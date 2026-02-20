@@ -8,7 +8,7 @@ interface Props {
     href?: string;
 }
 
-const {image, alt, href = ''} = Astro.props as Props;
+const {image, alt = '', href = ''} = Astro.props as Props;
 const imagePath = "/public" + image;
 const images = import.meta.glob<{ default: ImageMetadata }>('/public/admin/uploads/*.{jpeg,jpg,png,gif,webp}')
 if (!images[imagePath])
@@ -16,11 +16,11 @@ if (!images[imagePath])
 ---
 <div class="ce_text grid1 block">
   <figure class="image_container float_above">
-      { href.trim() !== '' ? (<a href={href} title={alt}>
-          <Image src={images[imagePath]()} alt={alt} title={alt} width={300} loading="lazy" />
+      {href.trim() !== '' ? (<a href={href} title={alt}>
+          <Image src={images[imagePath]()} alt={alt} title={alt} width={300} loading="lazy"/>
         </a>)
           : (
-          <Image src={images[imagePath]()} alt={alt} title={alt} width={300} loading="lazy" />)
+          <Image src={images[imagePath]()} alt={alt} title={alt} width={300} loading="lazy"/>)
       }
   </figure>
   <slot/>
