@@ -20,7 +20,7 @@ collections:
     summary: "{{name}}"
     fields:
       - { label: "Name für die Seite (im Admin Bereich)", name: "name", widget: "string" }
-      - { label: "Dateiname (Wird als Slug im URL Pfad verwendet)", name: "slug", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Slug darf nur aus Kleinbuchstaben und Bindestrichen bestehen (keine Leerzeichen) Beispiel: anamnese-und-therapiekonzept"] }
       - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'button', 'jamedaembedding', 'splitpage', 'imagegallery'] }
   - name: kinderwunsch
     label: Kinderwunsch Seiten
@@ -34,7 +34,7 @@ collections:
     summary: "{{name}}"
     fields:
       - { label: "Name für die Seite (im Admin Bereich)", name: "name", widget: "string" }
-      - { label: "URL-Pfad (Slug)", name: "slug", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Slug darf nur aus Kleinbuchstaben und Bindestrichen bestehen (keine Leerzeichen) Beispiel: anamnese-und-therapiekonzept"] }
       - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'button', 'jamedaembedding', 'splitpage', 'imagegallery'] }
   - name: schwangerschaft
     label: Schwangerschaft Seiten
@@ -48,7 +48,7 @@ collections:
     summary: "{{name}}"
     fields:
       - { label: "Name für die Seite (im Admin Bereich)", name: "name", widget: "string" }
-      - { label: "URL-Pfad (Slug)", name: "slug", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Slug darf nur aus Kleinbuchstaben und Bindestrichen bestehen (keine Leerzeichen) Beispiel: anamnese-und-therapiekonzept"] }
       - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'button', 'jamedaembedding', 'splitpage', 'imagegallery'] }
   - name: frauenheilkunde
     label: Frauenheilkunde Seiten
@@ -62,7 +62,7 @@ collections:
     summary: "{{name}}"
     fields:
       - { label: "Name für die Seite (im Admin Bereich)", name: "name", widget: "string" }
-      - { label: "URL-Pfad (Slug)", name: "slug", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Slug darf nur aus Kleinbuchstaben und Bindestrichen bestehen (keine Leerzeichen) Beispiel: anamnese-und-therapiekonzept"] }
       - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'button', 'jamedaembedding', 'splitpage', 'imagegallery'] }
   - name: babyzeit
     label: Babyzeit Seiten
@@ -76,7 +76,7 @@ collections:
     summary: "{{name}}"
     fields:
       - { label: "Name für die Seite (im Admin Bereich)", name: "name", widget: "string" }
-      - { label: "URL-Pfad (Slug)", name: "slug", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Slug darf nur aus Kleinbuchstaben und Bindestrichen bestehen (keine Leerzeichen) Beispiel: anamnese-und-therapiekonzept"] }
       - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'button', 'jamedaembedding', 'splitpage', 'imagegallery'] }
   - name: kontakt
     label: Kontakt Seiten
@@ -90,7 +90,7 @@ collections:
     summary: "{{name}}"
     fields:
       - { label: "Name für die Seite (im Admin Bereich)", name: "name", widget: "string" }
-      - { label: "URL-Pfad (Slug)", name: "slug", widget: "string" }
+      - { label: "URL Slug", name: "slug", widget: "string", pattern: ["^[a-z0-9-]+$", "Slug darf nur aus Kleinbuchstaben und Bindestrichen bestehen (keine Leerzeichen) Beispiel: anamnese-und-therapiekonzept"] }
       - { label: Inhalt, name: body, widget: markdown, editor_components: ['img', 'card', 'imageblock', 'button', 'jamedaembedding', 'splitpage', 'imagegallery'] }
   - name: settings
     label: Einstellungen
