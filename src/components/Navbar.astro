@@ -1,5 +1,43 @@
 ---
 import navigation from '../settings/navigation.json';
+import { getCollection } from 'astro:content';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const pages = await getCollection('page');
+const existingSlugs = new Set(pages.map(p => {
+    let s = p.id;
+    if (!s.startsWith('/')) s = '/' + s;
+    return s.replace(/\/+$/, '') || '/';
+}));
+
+// Check for physical .astro files in src/pages
+const pagesDir = path.resolve('./src/pages');
+function getPhysicalPages(dir: string, prefix = ''): string[] {
+    let results: string[] = [];
+    if (!fs.existsSync(dir)) return results;
+    const list = fs.readdirSync(dir);
+    list.forEach(file => {
+        const fullPath = path.join(dir, file);
+        const stat = fs.statSync(fullPath);
+        if (stat && stat.isDirectory()) {
+            results = results.concat(getPhysicalPages(fullPath, prefix + file + '/'));
+        } else if (file.endsWith('.astro') && !file.startsWith('[') && !file.startsWith('_')) {
+            let slug = prefix + file.replace('.astro', '');
+            if (slug === 'index') slug = '';
+            results.push('/' + slug.replace(/\/+$/, ''));
+        }
+    });
+    return results;
+}
+const physicalPages = getPhysicalPages(pagesDir);
+physicalPages.forEach(p => existingSlugs.add(p || '/'));
+
+function hrefExists(href: string) {
+    if (href.startsWith('http')) return true;
+    let norm = decodeURIComponent(href).replace(/\/+$/, '') || '/';
+    return existingSlugs.has(norm);
+}
 
 // Ensure we have a clean list of links with optional sublinks
 type NavLink = {
@@ -11,14 +49,14 @@ type NavLink = {
 };
 const links: Array<NavLink> = Array.isArray(navigation?.links)
     ? navigation.links
-        .filter((l: any) => l && typeof l.label === 'string' && typeof l.href === 'string')
+        .filter((l: any) => l && typeof l.label === 'string' && typeof l.href === 'string' && hrefExists(l.href))
         .map((l: any) => ({
             label: l.label,
             title: l.title,
             href: l.href,
             show_in_header: l.show_in_header,
             sublinks: Array.isArray(l?.sublinks)
-                ? l.sublinks.filter((s: any) => s && typeof s.label === 'string' && typeof s.href === 'string')
+                ? l.sublinks.filter((s: any) => s && typeof s.label === 'string' && typeof s.href === 'string' && hrefExists(s.href))
                 : undefined,
         }))
     : [];
