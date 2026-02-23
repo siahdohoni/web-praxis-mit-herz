@@ -4,6 +4,6 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.praxismitherz.de",
+  site: "https://www.praxismitherz.net",
   integrations: [mdx()],
 });
