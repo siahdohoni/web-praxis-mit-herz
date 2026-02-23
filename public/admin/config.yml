@@ -1,10 +1,10 @@
 backend:
   name: github
   repo: siahdohoni/web-praxis-mit-herz
-  branch: main
+  branch: yoga
 publish_mode: editorial_workflow
-site_url: https://praxismitherz.de
-display_url: https://praxismitherz.de
+site_url: https://yoga-mit-herz.de
+display_url: https://yoga-mit-herz.de
 media_folder: "public/admin/uploads"
 public_folder: "/admin/uploads"
 collections:
