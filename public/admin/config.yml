@@ -1,7 +1,9 @@
 backend:
-  name: github
+  name: git-gateway
   repo: siahdohoni/web-praxis-mit-herz
   branch: main
+  identity_url: https://auth.decapbridge.com/sites/4b3d92e0-3567-4b45-8259-45cccae1a1f7
+  gateway_url: https://gateway.decapbridge.com
 publish_mode: editorial_workflow
 site_url: https://praxismitherz.de
 display_url: https://praxismitherz.de
