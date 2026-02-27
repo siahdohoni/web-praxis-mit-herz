@@ -311,6 +311,15 @@
       "header": "/admin/uploads/Header_Startseite.jpg",
       "show_in_header": false,
       "sublinks": []
+    },
+    {
+      "label": "404",
+      "title": "Seite nicht gefunden",
+      "href": "/404",
+      "priority": 0.0,
+      "header": "/admin/uploads/Header_Startseite.jpg",
+      "show_in_header": false,
+      "sublinks": []
     }
   ]
 }
