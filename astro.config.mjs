@@ -6,4 +6,7 @@ import mdx from '@astrojs/mdx';
 export default defineConfig({
   site: "https://www.praxismitherz.de",
   integrations: [mdx()],
+  redirects: {
+    '/über-mich.html': '/über-mich/'
+  }
 });
