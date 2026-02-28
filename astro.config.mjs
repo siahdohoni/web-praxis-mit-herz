@@ -7,6 +7,7 @@ export default defineConfig({
   site: "https://www.praxismitherz.de",
   integrations: [mdx()],
   redirects: {
-    '/über-mich.html': '/über-mich/'
+    '/über-mich.html': '/über-mich/',
+    '/kontakt-und-anfahrt.html': '/kontakt/kontakt-und-anfahrt/'
   }
 });
